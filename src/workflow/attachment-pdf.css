@@ -1,0 +1,116 @@
+.w-attachment-pdf {
+  width: 100%;
+  min-width: 0;
+}
+
+.w-attachment-pdf-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.w-attachment-pdf-controls > span {
+  text-align: center;
+  font-size: var(--brand-type-body);
+}
+
+.w-attachment-pdf-page {
+  position: relative;
+  width: 100%;
+  height: min(62dvh, 740px);
+  min-height: 180px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.w-attachment-pdf-stage {
+  position: relative;
+  margin-inline: auto;
+  background: #ffffff;
+}
+
+.w-attachment-pdf-page canvas {
+  position: absolute;
+  display: block;
+  max-width: none;
+  max-height: none;
+  background: #ffffff;
+}
+
+.w-attachment-pdf-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.w-attachment-pdf-options label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.w-attachment-pdf-options :is(select, input) {
+  box-sizing: border-box;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #634d4d;
+  border-radius: 9px;
+  background: #231e1e;
+  color: inherit;
+  font: inherit;
+}
+
+.w-attachment-pdf-options input {
+  width: 80px;
+}
+
+.w-attachment-pdf-text {
+  margin-top: 14px;
+}
+
+.w-attachment-pdf-text summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.w-attachment-pdf-text p {
+  white-space: pre-wrap;
+  padding-block: 12px;
+}
+
+.w-attachment-pdf-page canvas.is-rendering {
+  visibility: hidden;
+}
+
+.w-attachment-pdf-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #d0bdbd;
+}
+
+@media (max-width: 600px) {
+  .w-attachment-pdf-controls {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .w-attachment-pdf-controls > span {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .w-attachment-preview .w-attachment-pdf-controls button {
+    padding-inline: 10px;
+  }
+}

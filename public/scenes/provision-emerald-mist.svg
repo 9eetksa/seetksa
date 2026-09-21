@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960">
+  <defs>
+    <filter id="mist" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".009 .014" numOctaves="3" seed="27" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="135" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="17"/>
+    </filter>
+    <radialGradient id="edge">
+      <stop offset="0" stop-color="white"/>
+      <stop offset=".55" stop-color="white"/>
+      <stop offset="1" stop-color="black"/>
+    </radialGradient>
+    <mask id="soft"><rect width="960" height="960" fill="url(#edge)"/></mask>
+  </defs>
+  <g mask="url(#soft)">
+    <g filter="url(#mist)" fill="none" stroke-linecap="round">
+      <path d="M120 810C590 770 120 490 390 390S770 330 600 100" stroke="#369b72" stroke-width="128" opacity=".5"/>
+      <path d="M180 860C550 620 240 580 440 440S720 220 560 100" stroke="#8be5b3" stroke-width="36" opacity=".62"/>
+      <path d="M300 890C650 650 390 580 610 420S780 280 690 170" stroke="#42c48d" stroke-width="66" opacity=".45"/>
+    </g>
+  </g>
+</svg>

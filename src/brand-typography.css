@@ -1,0 +1,161 @@
+/* Shared Arabic typography retained from the reference platform for Seet.
+   SemiBold headings, Medium subheads, Regular prose with responsive sizes.
+   Keep this stylesheet after studio.css so page layouts share one type system. */
+:root {
+  --brand-type-admin-display: clamp(2rem, 4vw, 3.625rem);
+  --brand-weight-heading: 600;
+  --brand-weight-subheading: 500;
+  --brand-weight-body: 400;
+  --brand-type-display: clamp(2.5rem, 4.1vw, 3.875rem);
+  --brand-type-hook-display: clamp(3.4rem, 8vw, 8rem);
+  --brand-type-hook-heading: clamp(2.8rem, 5.5vw, 5.5rem);
+  --brand-type-heading: clamp(1.75rem, 2.6vw, 2.5rem);
+  --brand-type-subheading: clamp(1.125rem, 1.5vw, 1.375rem);
+  --brand-type-request-title: clamp(1.375rem, 2.1vw, 1.875rem);
+  --brand-type-body: clamp(0.9375rem, 1.15vw, 1rem);
+  --brand-type-lead: clamp(1rem, 1.25vw, 1.125rem);
+  --brand-type-caption: clamp(0.625rem, 0.85vw, 0.75rem);
+  --brand-type-data: clamp(0.8125rem, 0.95vw, 0.875rem);
+  --brand-type-sidebar: 12px;
+  --brand-type-field: 12px;
+  --brand-leading-heading: 1.31;
+  --brand-leading-body: 1.65;
+}
+
+:is(.a-admin,.a-workspace,.a-inspector,.a-editor-top,.a-maintenance) {
+  font-family:var(--brand-font-arabic);
+  font-weight:var(--brand-weight-body);
+  font-size:var(--brand-type-body);
+  line-height:var(--brand-leading-body);
+}
+:is(.w-root,.w-dialog,.w-notification-panel,.w-inquiry-dialog) {
+  font-family:var(--brand-font-arabic);
+  font-size:var(--brand-type-body);
+  font-weight:var(--brand-weight-body);
+  line-height:var(--brand-leading-body);
+}
+:is(.w-root,.w-dialog) h2 {font-size:var(--brand-type-heading);font-weight:var(--brand-weight-heading)}
+:is(.w-root,.w-dialog,.w-inquiry-dialog) :is(h3,h4) {font-size:var(--brand-type-subheading);font-weight:var(--brand-weight-heading)}
+.w-inquiry-dialog :is(input,textarea,label){font-size:var(--brand-type-field)}
+:is(.w-root,.w-dialog) :is(button,label,summary) {font-weight:var(--brand-weight-subheading)}
+.w-root .w-brief {font-size:var(--brand-type-body);line-height:var(--brand-leading-body)}
+:is(.a-admin,.a-workspace,.a-inspector,.a-maintenance) :is(h1,h2,h3) {
+  font-weight:var(--brand-weight-heading);
+  line-height:var(--brand-leading-heading);
+  letter-spacing:normal;
+}
+.a-heading h1 {font-size:var(--brand-type-heading)}
+.a-hero h2,.a-workspace-main h1 {font-size:var(--brand-type-admin-display)}
+:is(.a-admin,.a-workspace,.a-inspector,.a-editor-top) :is(button,label,summary) {font-weight:var(--brand-weight-subheading)}
+
+.s-site {
+  font-family: var(--brand-font-arabic);
+  font-weight: var(--brand-weight-body);
+  font-size: var(--brand-type-body);
+  line-height: var(--brand-leading-body);
+  letter-spacing: normal;
+  font-synthesis: none;
+}
+
+.s-site :is(h1, h2, h3) {
+  font-family: var(--brand-font-arabic);
+  font-weight: var(--brand-weight-heading);
+  letter-spacing: normal;
+  line-height: var(--brand-leading-heading);
+}
+.s-site .pv-hook h1,.s-site .pv-hook-idea h2 {font-size:var(--brand-type-hook-display);line-height:1.15;font-weight:var(--brand-weight-heading)}
+.s-site .pv-hook :is(.pv-hook-garden,.pv-hook-transform,.pv-hook-finale) h2 {font-size:var(--brand-type-hook-heading);line-height:1.2}
+
+.s-site .s-hero h1 {
+  font-size: var(--brand-type-display);
+  line-height: var(--brand-leading-heading);
+  letter-spacing: normal;
+}
+
+.s-site :is(.s-section-intro, .s-about-copy, .s-portals-copy, .s-dialog) h2 {
+  font-size: var(--brand-type-heading);
+  line-height: var(--brand-leading-heading);
+  font-weight: var(--brand-weight-heading);
+  letter-spacing: normal;
+}
+
+.s-site :is(.s-service-card, .s-process-list, .s-dialog-services) h3,
+.s-site .s-portal-card b {
+  font-size: var(--brand-type-subheading);
+  font-weight: var(--brand-weight-subheading);
+  letter-spacing: normal;
+}
+
+.s-site :is(.s-section-intro, .s-about-copy, .s-portals-copy, .s-dialog, .s-form-result) > p,
+.s-site :is(.s-service-card, .s-process-list, .s-dialog-services) p {
+  font-size: var(--brand-type-body);
+  font-weight: var(--brand-weight-body);
+  line-height: var(--brand-leading-body);
+}
+
+.s-site .s-hero-copy > p {
+  font-size: var(--brand-type-lead);
+  font-weight: var(--brand-weight-body);
+  line-height: var(--brand-leading-body);
+}
+
+.s-site :is(button, input, textarea, select, .s-btn, .s-nav, .s-kicker) {
+  font-family: var(--brand-font-arabic);
+  letter-spacing: normal;
+}
+
+.s-site :is(button, .s-btn, .s-nav, .s-kicker, label) {
+  font-weight: var(--brand-weight-subheading);
+}
+
+.s-site :is(input, textarea, select) {
+  font-size: max(1rem, var(--brand-type-body));
+  font-weight: var(--brand-weight-body);
+}
+
+.s-site .s-eyebrow {
+  font-family: var(--brand-font-arabic);
+  font-weight: var(--brand-weight-subheading);
+  font-size: var(--brand-type-caption);
+  letter-spacing: 0.12em;
+}
+
+/* Times New Roman is the Latin prose face specified on page 11.
+   Use the local family; the packaged original stays with the identity archive. */
+.s-site p:lang(en),
+.s-site p :lang(en),
+.s-site .brand-latin-body {
+  font-family: var(--brand-font-latin-body);
+  font-weight: var(--brand-weight-body);
+  letter-spacing: normal;
+}
+
+/* Portal roles follow the same packaged identity fonts */
+.p-site .p-panel-heading h1 { font-size: var(--brand-type-subheading); font-weight: var(--brand-weight-heading); }
+.p-site .p-header nav { font-weight: var(--brand-weight-subheading); }
+.p-site .p-role-switch button { font-size: var(--brand-type-body); font-weight: var(--brand-weight-subheading); }
+.p-site .p-showcase-copy h2 { font-size: var(--brand-type-display); font-weight: var(--brand-weight-heading); }
+.p-site .p-showcase-copy > p { font-size: var(--brand-type-lead); }
+.p-site .p-dashboard h1 { font-size: var(--brand-type-heading); }
+.p-site .p-dashboard-empty h2 { font-size: var(--brand-type-subheading); }
+.p-site .p-benefits h3 { font-size: var(--brand-type-body); font-weight: var(--brand-weight-subheading); }
+.p-site :is(.p-panel-foot, .p-benefits p, .p-divider, .p-footer, .p-eyebrow, .p-hint) { font-size: max(.75rem, var(--brand-type-caption)); }
+.p-site .p-primary { font-size: var(--brand-type-lead); font-weight: var(--brand-weight-heading); }
+
+/* Explicit size roles stay consistent across lazy loaded workspace styles
+   Change size only and preserve the packaged family and existing weights */
+:is(.a-sidebar,.c-sidebar),
+:is(.a-sidebar,.c-sidebar) :is(a,button,span,small,b,strong,p) {
+  font-size: var(--brand-type-sidebar) !important;
+}
+:is(input,textarea,select,option,label,legend),
+label :is(span,strong,b),
+:is(.pv-date-trigger,.pv-date-trigger > span,.pv-date-wheel-label,.pv-date-option,[role="combobox"]) {
+  font-size: var(--brand-type-field) !important;
+}
+input::placeholder,textarea::placeholder,input::file-selector-button {
+  font-size: var(--brand-type-field) !important;
+}
+@media (max-width: 900px) {
+  :root { --brand-type-sidebar: 13px; }
+}

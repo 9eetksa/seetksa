@@ -1,0 +1,13 @@
+.w-notification-panel .w-notification-summary,
+.op-notification-copy .w-notification-summary{display:grid;gap:6px;min-width:0;text-align:start}
+.w-notification-summary>strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden;overflow-wrap:anywhere;color:#f3efef;font-size:var(--brand-type-body);font-weight:var(--brand-weight-subheading);line-height:1.7;text-align:start}
+.w-notification-panel .w-notification-summary>.w-notification-status,
+.op-notification-copy .w-notification-summary>.w-notification-status{display:flex;align-items:center;gap:7px;color:var(--notice-status,#c9b5b5);font-size:max(.75rem,var(--brand-type-caption));line-height:1.65;white-space:normal}
+.w-notification-status>i{width:5px;height:5px;flex-shrink:0;border-radius:50%;background:currentColor}
+.w-notification-status.is-waiting{--notice-status:#e4c47b}
+.w-notification-status.is-working{--notice-status:#9cccf5}
+.w-notification-status.is-review{--notice-status:#c7b3ed}
+.w-notification-status.is-done{--notice-status:#dca2a2}
+.w-notification-status.is-attention{--notice-status:#e5b29c}
+.w-notification-summary>.w-notification-client{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:start;color:#c8b7b7;font-size:var(--brand-type-caption);font-weight:var(--brand-weight-body);line-height:1.5}
+.w-notification-explanation{display:block;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--w-client-muted,#cab5b5);font-size:var(--brand-type-caption);line-height:var(--brand-leading-body)}

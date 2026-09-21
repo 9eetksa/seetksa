@@ -1,0 +1,28 @@
+.vercel
+.tools/
+node_modules/
+dist/
+.env*
+!.env.example
+*.blend1
+
+# Local service links and session state
+supabase/.temp/
+supabase/.branches/
+.auth/
+playwright/.auth/
+
+# Generated diagnostics and local caches
+test-results/
+playwright-report/
+coverage/
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.env*
+!.env.example
+.tools/
+node_modules/
+dist/

@@ -1,0 +1,32 @@
+{
+  "purpose": "Text and wordmark substitutions on original scene texture atlases",
+  "generator": "public/scenes/reference/brand-surfaces.js",
+  "geometryChanges": false,
+  "originalKtx2FilesModified": false,
+  "baseFormat": "Lossless WebP with exact RGB preservation for transparent pixels",
+  "orientation": "Original decoded KTX2 rows flipped vertically once for upright CanvasTexture input",
+  "verification": "All three base WebP RGBA pixel arrays match their upright original decoded PNG arrays exactly",
+  "bases": [
+    {
+      "file": "public/scenes/reference/assets/brand/base-board-certificates.webp",
+      "bytes": 440260,
+      "sha256": "ff33fd7e7e2ebb999e4143722336325d1fbc336f60c6b994da76882195e4a9cd"
+    },
+    {
+      "file": "public/scenes/reference/assets/brand/base-leather-money-shreds.webp",
+      "bytes": 774304,
+      "sha256": "fe845cfc79233226d837f9ee04f2dad2c8ebcfc9cdaf01e0ec531b2aabcb8458"
+    },
+    {
+      "file": "public/scenes/reference/assets/brand/base-shards-petals-coins.webp",
+      "bytes": 316188,
+      "sha256": "9f83a99b85bac0f9d9b94f55eaeda0dbe3c575973038df68ada7964c64a9a326"
+    }
+  ],
+  "coverage": {
+    "spcAtlas": "Six statistic sprites and eight corporate wordmarks on original glowing coin discs",
+    "moneyShredsAtlas": "Six quote panels with original portrait rectangles retained plus banknote wording and left source wordmark",
+    "certAtlas": "Eight certificate titles names body copy and signatures with original decorative seals crests and faint watermarks retained"
+  },
+  "review": "exports/reference-match/surface-review.html"
+}

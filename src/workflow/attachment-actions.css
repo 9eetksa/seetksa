@@ -1,0 +1,8 @@
+.file-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;min-width:0;max-width:100%}
+.file-actions.has-filename{width:100%}
+.file-actions.has-filename .file-preview-button{flex:1;justify-content:flex-start;text-align:start;min-width:0}
+.file-actions .file-preview-button span{min-width:0;overflow-wrap:anywhere;unicode-bidi:plaintext}
+.file-actions button>svg{flex-shrink:0}
+.file-actions .file-action-error{flex-basis:100%;color:var(--c-danger,#ffbfab);font-size:var(--brand-type-body)}
+.c-actions>.file-actions{max-width:100%}
+@media(max-width:600px){.file-actions.has-filename{align-items:stretch}.file-actions.has-filename .file-preview-button{flex-basis:calc(100% - 115px)}.file-actions button{min-height:44px}}

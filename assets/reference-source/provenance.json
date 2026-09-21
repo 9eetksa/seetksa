@@ -1,0 +1,536 @@
+{
+  "source": "https://why.zero.university/",
+  "name": "Why Zero",
+  "sourceMatch": "User supplied WhatsApp Video 2026-09-07 at 9.21.56 PM.mp4",
+  "retrievedAt": "2026-09-07",
+  "creators": [
+    "Zero University",
+    "BUNQ LABS",
+    "Sindhur Dutta"
+  ],
+  "caseStudy": "https://tympanus.net/codrops/2026/07/17/zero-the-engineering-behind-a-defiant-interactive-narrative/",
+  "usage": "Local reference scene adaptation requested by user",
+  "notes": [
+    "Exact geometry animation cameras and scene textures from public experience",
+    "No claim that source assets are originally authored by Pro Vision",
+    "Original JS HTML and CSS retained privately in assets/reference-source for review",
+    "External fonts are excluded local Pro Vision packaged IBM Plex Sans Arabic will be used",
+    "Original registration sharing and brand art assets excluded"
+  ],
+  "excluded": [
+    "assets/brand/nav_logo.svg",
+    "assets/brand/nav_logo_white.svg",
+    "assets/textures/origami_certificate.webp",
+    "assets/ui/company_card_dummy.svg",
+    "assets/ui/congrats.webp",
+    "assets/ui/plant.webp",
+    "assets/ui/share-card_congrats.webp",
+    "assets/ui/zero_icon.jpg"
+  ],
+  "files": [
+    {
+      "path": "public/scenes/reference/assets/atlases/board-certificates.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/board-certificates.ktx2",
+      "bytes": 177389,
+      "sha256": "c9630e784f1473f8cdeac2cde4c331723d08d68a324b688d938395fc30e804a2",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/atlases/clouds-mobile.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/clouds-mobile.ktx2",
+      "bytes": 31917,
+      "sha256": "21d5f40c7e735d54e2c9a9156b01c4a7721246d4bffee018eb4f1bdf11a8930b",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/atlases/clouds.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/clouds.ktx2",
+      "bytes": 83395,
+      "sha256": "ee11e234d8dce5fff2fe31a260b4a61759577d65bda724471174a84560539cbe",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/atlases/garden-godrays.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/garden-godrays.ktx2",
+      "bytes": 690456,
+      "sha256": "7f6246b4ea15eca3ce9f5460c0862274e1be7ed1620979df9e24da6aaafa81b2",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/atlases/human_hands.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/human_hands.ktx2",
+      "bytes": 969162,
+      "sha256": "f65eb33c4b68ee7d356f45d7cf958ac650d1da28a5809667c837a0c9c701ead9",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/atlases/leather-money-shreds.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/leather-money-shreds.ktx2",
+      "bytes": 208332,
+      "sha256": "f39a1df7fcdcca5b512a327ff78cf118bcd96be27c1dbad845e71b4efeb54f5e",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/atlases/shards-petals-coins.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/shards-petals-coins.ktx2",
+      "bytes": 169256,
+      "sha256": "962c8958faff1466fa09a5827607928378ed5d4daa0f818aa2946f77e0f442c3",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/atlases/texts.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/texts.ktx2",
+      "bytes": 540162,
+      "sha256": "f5c4b4f5cb2ff217d3f50589912c19d8e9bc9de4023c01de6c8bded854a705a3",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/atlases/world.ktx2",
+      "sourceUrl": "https://why.zero.university/assets/atlases/world.ktx2",
+      "bytes": 3154849,
+      "sha256": "5d8d38f84f2f208789092d074ab777dbf34b39985cafc9f2a7b3b56af1f29c2d",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/amb_stage1.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/amb_stage1.mp3",
+      "bytes": 230472,
+      "sha256": "228c1a099d9aeea21ef53352c5383cb737e0b069f2ae5da48dca9ac1934901bd",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/amb_stage2-3.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/amb_stage2-3.mp3",
+      "bytes": 114228,
+      "sha256": "059989fad48efb0f19c3a6688e16e2bbea9eeb10e7eb5907e41bed72ab0739f5",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/amb_stage4-5.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/amb_stage4-5.mp3",
+      "bytes": 335592,
+      "sha256": "97d97ed190b386621cabf83f4ad4dae651164dd615ea760198f5fad943654402",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/amb_stage5.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/amb_stage5.mp3",
+      "bytes": 108164,
+      "sha256": "a91fc34a7aa1ea831440a80c153b66a84e53669869830404e38ab9383dbce0df",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_click.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_click.mp3",
+      "bytes": 2016,
+      "sha256": "a2edda5b6ce63ba04c86ea24f185deb6ecf55bc4aa8578598724cf6227761733",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_glass-shatter.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_glass-shatter.mp3",
+      "bytes": 20592,
+      "sha256": "9272c7d97d4df93430af5c0deed37e42f883b74782c10a71af0b2123f772ae1c",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_hand-entry.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_hand-entry.mp3",
+      "bytes": 5112,
+      "sha256": "60e9b02942429d5ec28e2ace042d8fd289c2e349cc375aacb6cff51cfb2dc6e2",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_hold-button.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_hold-button.mp3",
+      "bytes": 35660,
+      "sha256": "d32d6395516e963ad99960b2148282929790cc7b5d96f5a41c4a7172d81c9d1c",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_loader-drag.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_loader-drag.mp3",
+      "bytes": 7461,
+      "sha256": "bc530ca0494a3bf4b7b4acdb35aebea5e26c2b195abf3d83ab3d000cfe4951ae",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_loader.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_loader.mp3",
+      "bytes": 76847,
+      "sha256": "8a4d71f31fae90ccdd57bd4528f8e93e50c8e096197c0dae4286c8bf3444ce1a",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_money-burn.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_money-burn.mp3",
+      "bytes": 12980,
+      "sha256": "eaa9074d1089dd171e8e6828ee6a7c2e6293e7e0eaef640e35662466589709c9",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_tunnel.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_tunnel.mp3",
+      "bytes": 19316,
+      "sha256": "6550f6dd4dd2df96249ff5693ac375583c58ecd15c535d5758de5f0f521524d1",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_whoosh.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_whoosh.mp3",
+      "bytes": 5364,
+      "sha256": "4f5cce9900c1224b95dbbd95b86a6ce05bba96886e55d201d95da534c6132ca3",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/audio/fx_xp-topup.mp3",
+      "sourceUrl": "https://why.zero.university/assets/audio/fx_xp-topup.mp3",
+      "bytes": 20940,
+      "sha256": "b95dcc5491bc8311acaa4d7813ccd92672b68b6feee10f20ec5a3d9add170df2",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/companies/google.webp",
+      "sourceUrl": "https://why.zero.university/assets/logos/companies/google.webp",
+      "bytes": 1760,
+      "sha256": "a1fe6a83703b1c6dc2cdc29c876eff842af3ef22e8409ae399fdc9eaeef3bab3",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/companies/nike.webp",
+      "sourceUrl": "https://why.zero.university/assets/logos/companies/nike.webp",
+      "bytes": 1174,
+      "sha256": "3667c1313b86c6ba7ad896a00b027affd76be1af9c1b592e15bff7eb26220394",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/companies/openai.webp",
+      "sourceUrl": "https://why.zero.university/assets/logos/companies/openai.webp",
+      "bytes": 2066,
+      "sha256": "a6130712857fb88c13887d44722eb9053576bfb1d296f27e72eecf84e47a0ddd",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/companies/spotify.webp",
+      "sourceUrl": "https://why.zero.university/assets/logos/companies/spotify.webp",
+      "bytes": 1790,
+      "sha256": "83dd4e2dea8add2b1722ecfa050e53171c974daac2edee7193ea1639ba640a76",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/anthropic.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/anthropic.svg",
+      "bytes": 296,
+      "sha256": "0d6f1c035b3a200b85b19a9b86e84b5ad71093a08c855895444e328de4c53199",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/canva.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/canva.svg",
+      "bytes": 2756,
+      "sha256": "0d90ba2030f2ad642e19234241467280e97034a151905d60e05f0fc9fc41dcff",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/codex.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/codex.svg",
+      "bytes": 1570,
+      "sha256": "2b4a04ddc2395b20d168694d3850ce2050a702c4a0cdeb4d8b31b9a970481a8c",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/cursor.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/cursor.svg",
+      "bytes": 454,
+      "sha256": "71572a9be192cc069ec22b48d785e61d754eeed7edb7d082d615f6d5620f70ec",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/gemini.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/gemini.svg",
+      "bytes": 401,
+      "sha256": "a6228d8846040401e941a39ed17459785e8324dbb7b870ce84233c9b3e9863a0",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/googlesheets.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/googlesheets.svg",
+      "bytes": 459,
+      "sha256": "2f15c51ea48cac508b16f589a53522fe060c7ed60c6ab483f78ac3b08b663b63",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/googleslides.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/googleslides.svg",
+      "bytes": 364,
+      "sha256": "0761b8cc80d7971bfc381d41d5da02e02afcf72414efe9db384105c2e8dd765a",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/jupyter.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/jupyter.svg",
+      "bytes": 914,
+      "sha256": "3f183c120635601352bccf48f06a5bc621eff1dd55ce6effe19d9f69951bce85",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/nextjs.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/nextjs.svg",
+      "bytes": 322,
+      "sha256": "593e14da3ddb65be4c8fa6a178f2f48a01a8bd39ea384f679cd7182b520da502",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/notebook.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/notebook.svg",
+      "bytes": 443,
+      "sha256": "2a1a2cd95ec5394725fda479a723095641134cb51db255416a2ade4c7312e488",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/pandas.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/pandas.svg",
+      "bytes": 339,
+      "sha256": "0246b1e34e3760b719bac711184671df5a2cb7a332d3091d49c2a383a2b72b2e",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/python.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/python.svg",
+      "bytes": 1533,
+      "sha256": "a762008752dc999ad54e7e477194f12a1b2ce07c735be1f21b3b3af8f26eb7af",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/supabase.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/supabase.svg",
+      "bytes": 303,
+      "sha256": "61bf16d93be418f723ae1e137e57afdad4f185352fbc6dea9482af1e0a89ccf7",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/logos/tools/vercel.svg",
+      "sourceUrl": "https://why.zero.university/assets/logos/tools/vercel.svg",
+      "bytes": 132,
+      "sha256": "57f1e4135486c566e9878fddd259f7f6bf8ec43f31e7e6e38a36d9e814a1c0e0",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/camera_1.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/camera_1.glb",
+      "bytes": 19476,
+      "sha256": "ded901d6295a6b4f03ba0f13966b89dd98a96ec44758078415a62c8252ca58f2",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/camera_2.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/camera_2.glb",
+      "bytes": 25512,
+      "sha256": "82db66ccdecdc5dbe32f4c4724ad488715f8074d543187b468632104bb6165d1",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/fancy_hand_2.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/fancy_hand_2.glb",
+      "bytes": 386196,
+      "sha256": "b1e534645d65573bfda554c73eaf57736333347f8183d5bfe2999c5c86d8fecf",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/glass_shards.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/glass_shards.glb",
+      "bytes": 156336,
+      "sha256": "3d7362296098874f2f526aa93c2c20c61e199022ad645d632775acd5cff622d3",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/human_hand_1.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/human_hand_1.glb",
+      "bytes": 352084,
+      "sha256": "db7ffa89848d505ac247c9db671554e79c6fc9e08a7910272d22aba6d0149604",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/human_hand_2.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/human_hand_2.glb",
+      "bytes": 230344,
+      "sha256": "98005c5d0c76015429f36df1b38a353dac5006af0226a56381a95758e7d823b2",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/loader_hand.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/loader_hand.glb",
+      "bytes": 11664,
+      "sha256": "01149c26a8914d92321c5f0265e22942992241d50ecc805f5dff7da19fbd2ab6",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/stage2_glass-shatter.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/stage2_glass-shatter.glb",
+      "bytes": 309104,
+      "sha256": "3fb960b6472a3be8ff206745dda649ac4b497c86b912efd5f5117d1c4a12480a",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/models/tunnel_new_new.glb",
+      "sourceUrl": "https://why.zero.university/assets/models/tunnel_new_new.glb",
+      "bytes": 9944,
+      "sha256": "b1dc3aa70345909faf64afab0537b5763a4556cf2fae812dd9abd8704668517b",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/textures/frost.webp",
+      "sourceUrl": "https://why.zero.university/assets/textures/frost.webp",
+      "bytes": 145028,
+      "sha256": "cc9dbadf99a883dcfd366cb62ef83bc68c8e049da1fa6dd1f09a716af4ce5d68",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/textures/frost_normal.webp",
+      "sourceUrl": "https://why.zero.university/assets/textures/frost_normal.webp",
+      "bytes": 136534,
+      "sha256": "d18257c4449e8ce97cb68a943a96bbb8cc610cac25ff0c83d4fdbf0511333a9d",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/textures/matcap-certificate.webp",
+      "sourceUrl": "https://why.zero.university/assets/textures/matcap-certificate.webp",
+      "bytes": 2922,
+      "sha256": "7e6928f0949d38ce9808ab51da25b581d1859f485b3d034ec2b55313d341d7c8",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/textures/matcap-hand.webp",
+      "sourceUrl": "https://why.zero.university/assets/textures/matcap-hand.webp",
+      "bytes": 7710,
+      "sha256": "e658e406d613fb65cf862a62f24379e088b95b81fc4f20a58dd57505e584f098",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/textures/stage2_background2.webp",
+      "sourceUrl": "https://why.zero.university/assets/textures/stage2_background2.webp",
+      "bytes": 11408,
+      "sha256": "900eebf45703d3bf4f558bd49d63c113643ef24d108b0919f87f3f469c13f77f",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/textures/stage3_background1.webp",
+      "sourceUrl": "https://why.zero.university/assets/textures/stage3_background1.webp",
+      "bytes": 23568,
+      "sha256": "48771a29bac3ef9d665457cc69f9f5c69c8d7a003271eb935c9a7f65a368aeb2",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/textures/stage3_money-hand.webp",
+      "sourceUrl": "https://why.zero.university/assets/textures/stage3_money-hand.webp",
+      "bytes": 44442,
+      "sha256": "2525819c880498711914f43f65b0516b25ba0c59cf7249c444008add336174e3",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/ui/cursors_atlas.webp",
+      "sourceUrl": "https://why.zero.university/assets/ui/cursors_atlas.webp",
+      "bytes": 4990,
+      "sha256": "6fe63df5d9b2273e9426e1702c4b73aada2a6b4c25e34eba6047e78afd7f2e9e",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/ui/xp.webp",
+      "sourceUrl": "https://why.zero.university/assets/ui/xp.webp",
+      "bytes": 2896,
+      "sha256": "69773cfc183e35da6e6320468426a2e4d8b180e6f4aadab4858c29698cecf47b",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/videos/ChatGPT-Card.mp4",
+      "sourceUrl": "https://why.zero.university/assets/videos/ChatGPT-Card.mp4",
+      "bytes": 384610,
+      "sha256": "e358af5a58244bdfdf9ef358de37e15d60919db42fd55117c324798aed3372a0",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/videos/Google-Card.mp4",
+      "sourceUrl": "https://why.zero.university/assets/videos/Google-Card.mp4",
+      "bytes": 450783,
+      "sha256": "2e4d9ca0a2632aea673f2c21048d2aa9e2bd7571431ed199f099041376d7c4ab",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/videos/Nike-Card.mp4",
+      "sourceUrl": "https://why.zero.university/assets/videos/Nike-Card.mp4",
+      "bytes": 555409,
+      "sha256": "769a1287028685013a06c7d1088b17955a5e3d773c87f7a0899d3e4706f65681",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/videos/Spotify-Card.mp4",
+      "sourceUrl": "https://why.zero.university/assets/videos/Spotify-Card.mp4",
+      "bytes": 488460,
+      "sha256": "f7dd65c9aeba019529aa9881df6ef71e04377166b4662a9bcff323da533465fd",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/videos/stage2_background_video-desktop.mp4",
+      "sourceUrl": "https://why.zero.university/assets/videos/stage2_background_video-desktop.mp4",
+      "bytes": 300191,
+      "sha256": "c8652a8d3e052b5ba4a3127a7c424030ed7d26343ff0cf19dc964fb3d981de1c",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/videos/stage2_background_video-mobile.mp4",
+      "sourceUrl": "https://why.zero.university/assets/videos/stage2_background_video-mobile.mp4",
+      "bytes": 46770,
+      "sha256": "4a881dc93f39fd6fd56238ff0c6aeb971463f874c83d346cbb3761d0f187fa38",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/videos/star_animation_480.mp4",
+      "sourceUrl": "https://why.zero.university/assets/videos/star_animation_480.mp4",
+      "bytes": 57596,
+      "sha256": "6ed57230d429817fff4a0d301ca83f4ef84ddb4857bc5b6294d3b47ef28057c3",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/assets/videos/star_animation_720.mp4",
+      "sourceUrl": "https://why.zero.university/assets/videos/star_animation_720.mp4",
+      "bytes": 95355,
+      "sha256": "440751fcf955c5673cbdae54bc4afb20560f476241c9d47a33538a6248600835",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/vendor/basis/basis_transcoder.js",
+      "sourceUrl": "https://why.zero.university/vendor/basis/basis_transcoder.js",
+      "bytes": 62337,
+      "sha256": "48a0ef319a28bf0224ee88ded34f74eaf97c175bba9eb18b47fb9720510ad6c4",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/vendor/basis/basis_transcoder.wasm",
+      "sourceUrl": "https://why.zero.university/vendor/basis/basis_transcoder.wasm",
+      "bytes": 499935,
+      "sha256": "79ae97d781e10a566659c689b7bb1de91726453f55f9f5e3bcc07a4e3904070f",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/vendor/draco/draco_decoder.js",
+      "sourceUrl": "https://why.zero.university/vendor/draco/draco_decoder.js",
+      "bytes": 512465,
+      "sha256": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/vendor/draco/draco_decoder.wasm",
+      "sourceUrl": "https://why.zero.university/vendor/draco/draco_decoder.wasm",
+      "bytes": 192420,
+      "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
+      "status": "downloaded"
+    },
+    {
+      "path": "public/scenes/reference/vendor/draco/draco_wasm_wrapper.js",
+      "sourceUrl": "https://why.zero.university/vendor/draco/draco_wasm_wrapper.js",
+      "bytes": 58456,
+      "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
+      "status": "downloaded"
+    }
+  ]
+}

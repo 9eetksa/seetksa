@@ -1,0 +1,19 @@
+.env*
+.tools/
+node_modules/
+dist/
+.git/
+supabase/*
+!supabase/functions
+supabase/functions/*
+!supabase/functions/_shared
+!supabase/functions/_shared/*.js
+scripts/
+tests/
+test/
+docs/
+/assets/
+exports/
+brand-identity/
+Pro Vision Idenitiy_Folder/
+*.md

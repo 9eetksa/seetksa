@@ -1,0 +1,266 @@
+[
+  {
+    "path": "public/scenes/reference/assets/models/camera_1.glb",
+    "bytes": 19476,
+    "nodes": 1,
+    "meshes": [],
+    "cameras": [
+      {
+        "name": "Camera",
+        "perspective": {
+          "aspectRatio": 1.7777777777777777,
+          "yfov": 0.4243657122946699,
+          "zfar": 1000,
+          "znear": 0.10000000149011612
+        },
+        "type": "perspective"
+      }
+    ],
+    "animations": [
+      {
+        "name": "CameraAction",
+        "channels": 3,
+        "timeMin": 0.03333333333333333,
+        "timeMax": 18.566666666666666
+      }
+    ]
+  },
+  {
+    "path": "public/scenes/reference/assets/models/camera_2.glb",
+    "bytes": 25512,
+    "nodes": 2,
+    "meshes": [
+      "Cube"
+    ],
+    "cameras": [
+      {
+        "name": "Camera.001",
+        "perspective": {
+          "aspectRatio": 1.7777777777777777,
+          "yfov": 0.39959652046304894,
+          "zfar": 1000,
+          "znear": 0.10000000149011612
+        },
+        "type": "perspective"
+      }
+    ],
+    "animations": [
+      {
+        "name": "CameraActionScene2",
+        "channels": 6,
+        "timeMin": 0.8,
+        "timeMax": 16.333333333333332
+      }
+    ]
+  },
+  {
+    "path": "public/scenes/reference/assets/models/fancy_hand_2.glb",
+    "bytes": 386196,
+    "nodes": 26,
+    "meshes": [
+      "GreenHand"
+    ],
+    "cameras": [],
+    "animations": [
+      {
+        "name": "Animation",
+        "channels": 72,
+        "timeMin": 0.033333336313565574,
+        "timeMax": 18.566668192545574
+      }
+    ]
+  },
+  {
+    "path": "public/scenes/reference/assets/models/glass_shards.glb",
+    "bytes": 156336,
+    "nodes": 16,
+    "meshes": [
+      "Shard_07",
+      "Shard_06",
+      "Shard_05",
+      "Shard_04",
+      "Shard_03",
+      "Shard_02",
+      "Shard_01",
+      "Cube.001_cell.188_cell.001",
+      "Cube.001_cell.182_cell.001",
+      "Cube.001_cell.180_cell.002",
+      "Cube.001_cell.175_cell.001",
+      "Cube.001_cell.158_cell.004",
+      "Cube.001_cell.158_cell.003",
+      "Cube.001_cell.158_cell.002",
+      "Cube.001_cell.138_cell.001",
+      "Cube.001_cell.001"
+    ],
+    "cameras": [],
+    "animations": []
+  },
+  {
+    "path": "public/scenes/reference/assets/models/human_hand_1.glb",
+    "bytes": 352084,
+    "nodes": 26,
+    "meshes": [
+      "HumanHand"
+    ],
+    "cameras": [],
+    "animations": [
+      {
+        "name": "HumanHandAction",
+        "channels": 72,
+        "timeMin": 0.03333333333333333,
+        "timeMax": 18.566666666666666
+      }
+    ]
+  },
+  {
+    "path": "public/scenes/reference/assets/models/human_hand_2.glb",
+    "bytes": 230344,
+    "nodes": 26,
+    "meshes": [
+      "SK_Custom_Arms_M_Arms_0.007"
+    ],
+    "cameras": [],
+    "animations": [
+      {
+        "name": "Animation",
+        "channels": 72,
+        "timeMin": 0.041666666666666664,
+        "timeMax": 15.541666666666666
+      }
+    ]
+  },
+  {
+    "path": "public/scenes/reference/assets/models/loader_hand.glb",
+    "bytes": 11664,
+    "nodes": 1,
+    "meshes": [
+      "SK_Custom_Arms_M_Arms_0"
+    ],
+    "cameras": [],
+    "animations": []
+  },
+  {
+    "path": "public/scenes/reference/assets/models/stage2_glass-shatter.glb",
+    "bytes": 309104,
+    "nodes": 100,
+    "meshes": [
+      "Cube.001_cell.188_cell.001",
+      "Cube.001_cell.188_cell.003",
+      "Cube.001_cell.187_cell.002",
+      "Cube.001_cell.187_cell.003",
+      "Cube.001_cell.186_cell_cell.001",
+      "Cube.001_cell.186_cell_cell.004",
+      "Cube.001_cell.186_cell_cell.005",
+      "Cube.001_cell.184_cell.002",
+      "Cube.001_cell.184_cell.003",
+      "Cube.001_cell.182_cell.003_cell.001",
+      "Cube.001_cell.182_cell.003_cell.003",
+      "Cube.001_cell.182_cell.001",
+      "Cube.001_cell.180_cell.001",
+      "Cube.001_cell.179_cell.002",
+      "Cube.001_cell.178_cell_cell_cell.002",
+      "Cube.001_cell.178_cell_cell.001_cell.002",
+      "Cube.001_cell.178_cell_cell.001",
+      "Cube.001_cell.177_cell.002",
+      "Cube.001_cell.176_cell.003",
+      "Cube.001_cell.176_cell.002_cell.002",
+      "Cube.001_cell.176_cell.002_cell.003",
+      "Cube.001_cell.176_cell.004",
+      "Cube.001_cell.175_cell.001",
+      "Cube.001_cell.174_cell_cell.002",
+      "Cube.001_cell.171_cell_cell.001",
+      "Cube.001_cell.171_cell.002_cell.001",
+      "Cube.001_cell.171_cell.002_cell.003",
+      "Cube.001_cell.171_cell.002",
+      "Cube.001_cell.170_cell.001",
+      "Cube.001_cell.170_cell.004",
+      "Cube.001_cell.169_cell_cell.002",
+      "Cube.001_cell.168_cell.003",
+      "Cube.001_cell.168_cell.002_cell.001",
+      "Cube.001_cell.168_cell.004",
+      "Cube.001_cell.167_cell.001",
+      "Cube.001_cell.167_cell.002",
+      "Cube.001_cell.167_cell.003",
+      "Cube.001_cell.167_cell.005",
+      "Cube.001_cell.166_cell.003",
+      "Cube.001_cell.166_cell.002_cell.001",
+      "Cube.001_cell.166_cell.004",
+      "Cube.001_cell.165_cell_cell.001",
+      "Cube.001_cell.165_cell.004_cell.001",
+      "Cube.001_cell.165_cell.004_cell.001_cell.003",
+      "Cube.001_cell.165_cell.004_cell.001_cell.004",
+      "Cube.001_cell.165_cell.001",
+      "Cube.001_cell.164_cell.001",
+      "Cube.001_cell.164_cell.003",
+      "Cube.001_cell.163_cell.001",
+      "Cube.001_cell.163_cell.003",
+      "Cube.001_cell.163_cell.004",
+      "Cube.001_cell.159_cell.002_cell_cell.001",
+      "Cube.001_cell.159_cell.002",
+      "Cube.001_cell.158_cell.001",
+      "Cube.001_cell.158_cell.002",
+      "Cube.001_cell.158_cell.003",
+      "Cube.001_cell.156_cell.002",
+      "Cube.001_cell.153_cell_cell.001",
+      "Cube.001_cell.153_cell.001_cell.002",
+      "Cube.001_cell.151_cell.001_cell.002",
+      "Cube.001_cell.151_cell.002",
+      "Cube.001_cell.149_cell.002",
+      "Cube.001_cell.148_cell_cell.001",
+      "Cube.001_cell.148_cell_cell.003",
+      "Cube.001_cell.148_cell.002",
+      "Cube.001_cell.147_cell.003",
+      "Cube.001_cell.147_cell.002_cell.002",
+      "Cube.001_cell.147_cell.004",
+      "Cube.001_cell.146_cell.001",
+      "Cube.001_cell.146_cell.002",
+      "Cube.001_cell.146_cell.004",
+      "Cube.001_cell.146_cell.005",
+      "Cube.001_cell.144_cell.002_cell.002",
+      "Cube.001_cell.144_cell.001_cell.001",
+      "Cube.001_cell.144_cell.001_cell.004",
+      "Cube.001_cell.143_cell.001",
+      "Cube.001_cell.143_cell.004",
+      "Cube.001_cell.143_cell.005",
+      "Cube.001_cell.141_cell_cell.002",
+      "Cube.001_cell.140_cell.003",
+      "Cube.001_cell.140_cell.002_cell_cell.002",
+      "Cube.001_cell.140_cell.002_cell_cell.003",
+      "Cube.001_cell.140_cell.002_cell.001_cell.002",
+      "Cube.001_cell.140_cell.002_cell.001_cell.003",
+      "Cube.001_cell.140_cell.004",
+      "Cube.001_cell.138_cell.001",
+      "Cube.001_cell.001",
+      "Cube.001_cell.002",
+      "Cube.001_cell.003",
+      "Cube.001_cell.004",
+      "Cube.001_cell.005",
+      "Cube.001_cell.006",
+      "Cube.001_cell.007",
+      "Cube.001_cell.008",
+      "Cube.001_cell.009",
+      "Cube.001_cell.010",
+      "Cube.001_cell.011",
+      "Cube.001_cell.012"
+    ],
+    "cameras": [],
+    "animations": [
+      {
+        "name": "Animation",
+        "channels": 300,
+        "timeMin": 0.041666666666666664,
+        "timeMax": 8.333333333333334
+      }
+    ]
+  },
+  {
+    "path": "public/scenes/reference/assets/models/tunnel_new_new.glb",
+    "bytes": 9944,
+    "nodes": 1,
+    "meshes": [
+      "Curve"
+    ],
+    "cameras": [],
+    "animations": []
+  }
+]

@@ -1,0 +1,457 @@
+{
+  "path": "assets/atlases/texts.ktx2",
+  "pixelWidth": 3072,
+  "pixelHeight": 3072,
+  "designWidth": 2048,
+  "designHeight": 2048,
+  "pixelScale": 1.5,
+  "regions": {
+    "stage1": [
+      {
+        "rect": [
+          0.0,
+          0.0,
+          775.26,
+          371.64
+        ],
+        "rotate": false,
+        "pixelRect": [
+          0.0,
+          0.0,
+          1162.8899999999999,
+          557.46
+        ],
+        "baseScale": 0.4,
+        "anchor": "center-center",
+        "appearAt": 0.0,
+        "disappearAt": 0.02
+      },
+      {
+        "rect": [
+          1703.34,
+          0.0,
+          557.46,
+          341.94
+        ],
+        "rotate": true,
+        "pixelRect": [
+          2555.0099999999998,
+          0.0,
+          512.91,
+          836.19
+        ],
+        "baseScale": 0.25,
+        "anchor": "top-left",
+        "appearAt": 0.2,
+        "disappearAt": 0.6
+      },
+      {
+        "rect": [
+          0.0,
+          558.45,
+          257.05,
+          185.82
+        ],
+        "rotate": false,
+        "pixelRect": [
+          0.0,
+          837.6750000000001,
+          385.57500000000005,
+          278.73
+        ],
+        "baseScale": 0.17,
+        "anchor": "bottom-right",
+        "appearAt": 0.3,
+        "disappearAt": 0.6
+      },
+      {
+        "rect": [
+          1388.64,
+          0.0,
+          557.46,
+          314.15
+        ],
+        "rotate": true,
+        "pixelRect": [
+          2082.96,
+          0.0,
+          471.22499999999997,
+          836.19
+        ],
+        "baseScale": 0.175,
+        "anchor": "center-center",
+        "appearAt": 0.6,
+        "disappearAt": 0.95
+      }
+    ],
+    "gate1to2": [
+      {
+        "rect": [
+          257.75,
+          558.45,
+          247.06,
+          165.84
+        ],
+        "rotate": false,
+        "pixelRect": [
+          386.625,
+          837.6750000000001,
+          370.59000000000003,
+          248.76
+        ],
+        "baseScale": 0.15,
+        "anchor": "center-center",
+        "appearAt": 1.0,
+        "disappearAt": 2.0
+      }
+    ],
+    "stage2": [
+      {
+        "rect": [
+          1092.93,
+          558.45,
+          945.23,
+          371.64
+        ],
+        "rotate": false,
+        "pixelRect": [
+          1639.395,
+          837.6750000000001,
+          1417.845,
+          557.46
+        ],
+        "baseScale": 0.4,
+        "anchor": "center-center",
+        "appearAt": 0.0,
+        "disappearAt": 0.2
+      }
+    ],
+    "stage3": [
+      {
+        "rect": [
+          0.0,
+          371.64,
+          365.21,
+          186.82
+        ],
+        "rotate": false,
+        "pixelRect": [
+          0.0,
+          557.46,
+          547.8149999999999,
+          280.23
+        ],
+        "baseScale": 0.25,
+        "anchor": "bottom-left",
+        "appearAt": 0.05,
+        "disappearAt": 0.3
+      },
+      {
+        "rect": [
+          505.51,
+          604.41,
+          594.62,
+          355.65
+        ],
+        "rotate": false,
+        "pixelRect": [
+          758.265,
+          906.615,
+          891.9300000000001,
+          533.4749999999999
+        ],
+        "baseScale": 0.4,
+        "anchor": "center-center",
+        "appearAt": 0.3,
+        "disappearAt": 0.4
+      },
+      {
+        "rect": [
+          363.64,
+          371.64,
+          337.74,
+          186.82
+        ],
+        "rotate": false,
+        "pixelRect": [
+          545.46,
+          557.46,
+          506.61,
+          280.23
+        ],
+        "baseScale": 0.25,
+        "anchor": "top-left",
+        "appearAt": 0.4,
+        "disappearAt": 0.6
+      },
+      {
+        "rect": [
+          0.0,
+          1023.0,
+          482.83,
+          168.84
+        ],
+        "rotate": false,
+        "pixelRect": [
+          0.0,
+          1534.5,
+          724.245,
+          253.26
+        ],
+        "baseScale": 0.25,
+        "anchor": "bottom-right",
+        "appearAt": 0.5,
+        "disappearAt": 0.6
+      },
+      {
+        "rect": [
+          0.0,
+          744.27,
+          472.68,
+          278.73
+        ],
+        "rotate": false,
+        "pixelRect": [
+          0.0,
+          1116.405,
+          709.02,
+          418.095
+        ],
+        "baseScale": 0.25,
+        "anchor": "center-center",
+        "appearAt": 0.6,
+        "disappearAt": 0.7
+      },
+      {
+        "rect": [
+          775.24,
+          0.0,
+          521.92,
+          325.68
+        ],
+        "rotate": false,
+        "pixelRect": [
+          1162.8600000000001,
+          0.0,
+          782.8799999999999,
+          488.52
+        ],
+        "baseScale": 0.38,
+        "anchor": "center-center",
+        "appearAt": 0.7,
+        "disappearAt": 0.8
+      },
+      {
+        "rect": [
+          771.0,
+          1542.0,
+          667.0,
+          221.0
+        ],
+        "rotate": false,
+        "pixelRect": [
+          1156.5,
+          2313.0,
+          1000.5,
+          331.5
+        ],
+        "baseScale": 0.38,
+        "anchor": "center-center",
+        "appearAt": 0.8,
+        "disappearAt": 0.87
+      },
+      {
+        "rect": [
+          700.32,
+          371.64,
+          331.52,
+          232.77
+        ],
+        "rotate": false,
+        "pixelRect": [
+          1050.48,
+          557.46,
+          497.28,
+          349.15500000000003
+        ],
+        "baseScale": 0.25,
+        "anchor": "top-left",
+        "appearAt": 0.87,
+        "disappearAt": 0.99
+      },
+      {
+        "rect": [
+          1030.99,
+          325.68,
+          334.61,
+          232.77
+        ],
+        "rotate": false,
+        "pixelRect": [
+          1546.4850000000001,
+          488.52,
+          501.915,
+          349.15500000000003
+        ],
+        "baseScale": 0.25,
+        "anchor": "bottom-right",
+        "appearAt": 0.93,
+        "disappearAt": 0.99
+      }
+    ],
+    "stage4": [
+      {
+        "rect": [
+          483.53,
+          960.06,
+          622.09,
+          175.83
+        ],
+        "rotate": false,
+        "pixelRect": [
+          725.295,
+          1440.09,
+          933.135,
+          263.745
+        ],
+        "baseScale": 0.35,
+        "anchor": "center-center",
+        "appearAt": 0.0,
+        "disappearAt": 0.09999999999999999
+      },
+      {
+        "rect": [
+          1083.94,
+          1769.27,
+          963.5,
+          278.73
+        ],
+        "rotate": false,
+        "pixelRect": [
+          1625.91,
+          2653.9049999999997,
+          1445.25,
+          418.095
+        ],
+        "baseScale": 0.35,
+        "anchor": "center-center",
+        "appearAt": 0.09999999999999999,
+        "disappearAt": 0.3
+      },
+      {
+        "rect": [
+          0,
+          1192.84,
+          579.84,
+          361.65
+        ],
+        "rotate": false,
+        "pixelRect": [
+          0.0,
+          1789.2599999999998,
+          869.76,
+          542.4749999999999
+        ],
+        "baseScale": 0.35,
+        "anchor": "center-center",
+        "appearAt": 0.3,
+        "disappearAt": 0.39999999999999997
+      },
+      {
+        "rect": [
+          1313.72,
+          1281.75,
+          734.56,
+          336.67
+        ],
+        "rotate": false,
+        "pixelRect": [
+          1970.58,
+          1922.625,
+          1101.84,
+          505.005
+        ],
+        "baseScale": 0.35,
+        "anchor": "center-center",
+        "appearAt": 0.39999999999999997,
+        "disappearAt": 0.5
+      },
+      {
+        "rect": [
+          581.43,
+          1135.89,
+          732.38,
+          335.67
+        ],
+        "rotate": false,
+        "pixelRect": [
+          872.145,
+          1703.835,
+          1098.57,
+          503.505
+        ],
+        "baseScale": 0.35,
+        "anchor": "center-center",
+        "appearAt": 0.5,
+        "disappearAt": 0.6
+      },
+      {
+        "rect": [
+          1240.79,
+          930.09,
+          803.79,
+          351.66
+        ],
+        "rotate": false,
+        "pixelRect": [
+          1861.185,
+          1395.135,
+          1205.685,
+          527.49
+        ],
+        "baseScale": 0.35,
+        "anchor": "center-center",
+        "appearAt": 0.6,
+        "disappearAt": 0.7000000000000001
+      },
+      {
+        "rect": [
+          0,
+          1848.2,
+          750.18,
+          199.8
+        ],
+        "rotate": false,
+        "pixelRect": [
+          0.0,
+          2772.3,
+          1125.27,
+          299.70000000000005
+        ],
+        "baseScale": 0.35,
+        "anchor": "center-center",
+        "appearAt": 0.7000000000000001,
+        "disappearAt": 0.7999999999999999
+      },
+      {
+        "rect": [
+          0,
+          1555.48,
+          769.93,
+          292.71
+        ],
+        "rotate": false,
+        "pixelRect": [
+          0.0,
+          2333.2200000000003,
+          1154.895,
+          439.06499999999994
+        ],
+        "baseScale": 0.35,
+        "anchor": "center-center",
+        "appearAt": 0.7999999999999999,
+        "disappearAt": 0.9
+      }
+    ]
+  }
+}

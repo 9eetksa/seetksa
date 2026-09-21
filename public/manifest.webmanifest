@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "صيت",
+  "short_name": "صيت",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#101011",
+  "theme_color": "#101011",
+  "icons": [
+    {
+      "src": "/brand/seet-logo-dark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

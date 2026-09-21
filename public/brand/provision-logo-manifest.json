@@ -1,0 +1,131 @@
+{
+  "source": "Pro Vision Idenitiy_Folder/Pro Vision Idenitiy.pdf",
+  "source_page": 6,
+  "white_variant_page": 7,
+  "method": "Original cubic Bezier paths, original clipped gradient textures, shallow extrusion",
+  "mesh_count": 13,
+  "editable_curve_count": 13,
+  "vertices": 31968,
+  "textures": 3,
+  "extrusion_depth": 0.09,
+  "width": 7.0093982,
+  "parts": [
+    {
+      "name": "Lettering_01",
+      "dimensions": [
+        0.7761006355285645,
+        0.8665404319763184,
+        0.09600000083446503
+      ],
+      "vertices": 4000
+    },
+    {
+      "name": "Lettering_02",
+      "dimensions": [
+        2.2021498680114746,
+        0.7949791550636292,
+        0.09600000083446503
+      ],
+      "vertices": 4200
+    },
+    {
+      "name": "Lettering_03",
+      "dimensions": [
+        0.19654065370559692,
+        0.16875091195106506,
+        0.09600000083446503
+      ],
+      "vertices": 1400
+    },
+    {
+      "name": "Lettering_04",
+      "dimensions": [
+        0.19828033447265625,
+        0.17023134231567383,
+        0.09600000083446503
+      ],
+      "vertices": 1600
+    },
+    {
+      "name": "Lettering_05",
+      "dimensions": [
+        0.1989508867263794,
+        0.17023074626922607,
+        0.09600000083446503
+      ],
+      "vertices": 1500
+    },
+    {
+      "name": "Lettering_06",
+      "dimensions": [
+        0.1989612579345703,
+        0.17023074626922607,
+        0.09600000083446503
+      ],
+      "vertices": 1500
+    },
+    {
+      "name": "Lettering_07",
+      "dimensions": [
+        0.1989511251449585,
+        0.17024260759353638,
+        0.09600000083446503
+      ],
+      "vertices": 1000
+    },
+    {
+      "name": "Lettering_08",
+      "dimensions": [
+        3.9276533126831055,
+        0.8751201629638672,
+        0.09600000083446503
+      ],
+      "vertices": 12360
+    },
+    {
+      "name": "Lettering_09",
+      "dimensions": [
+        0.1989329606294632,
+        0.17024143040180206,
+        0.09600000083446503
+      ],
+      "vertices": 1100
+    },
+    {
+      "name": "Emblem_outline",
+      "dimensions": [
+        2.5193333625793457,
+        2.262500286102295,
+        0.09600000083446503
+      ],
+      "vertices": 2100
+    },
+    {
+      "name": "Emblem_ribbon_1",
+      "dimensions": [
+        2.1806750297546387,
+        1.3484094142913818,
+        0.0020000000949949026
+      ],
+      "vertices": 360
+    },
+    {
+      "name": "Emblem_ribbon_2",
+      "dimensions": [
+        1.9769567251205444,
+        1.7012587785720825,
+        0.0020000000949949026
+      ],
+      "vertices": 464
+    },
+    {
+      "name": "Emblem_ribbon_3",
+      "dimensions": [
+        1.30977463722229,
+        1.71014404296875,
+        0.0020000000949949026
+      ],
+      "vertices": 384
+    }
+  ]
+}

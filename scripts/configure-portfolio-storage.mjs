@@ -1,0 +1,13 @@
+import {loadEnv} from 'vite';
+import {createClient} from '@supabase/supabase-js';
+import WebSocket from 'ws';
+const env=loadEnv('development',process.cwd(),'');
+if(!env.VITE_SUPABASE_URL||!env.SUPABASE_SERVICE_ROLE_KEY)throw new Error('Missing server storage configuration');
+const db=createClient(env.VITE_SUPABASE_URL,env.SUPABASE_SERVICE_ROLE_KEY,{auth:{persistSession:false,autoRefreshToken:false},realtime:{transport:WebSocket}});
+const options={public:false,fileSizeLimit:null,allowedMimeTypes:['image/jpeg','image/png','image/webp','image/avif','image/gif']};
+const existing=await db.storage.getBucket('portfolio-assets');
+const response=existing.data?await db.storage.updateBucket('portfolio-assets',options):await db.storage.createBucket('portfolio-assets',options);
+if(response.error)throw new Error(`Portfolio storage configuration failed ${response.error.status||''}`);
+const {data,error}=await db.storage.getBucket('portfolio-assets');
+if(error||!data||data.public||data.file_size_limit!==null||JSON.stringify([...(data.allowed_mime_types||[])].sort())!==JSON.stringify([...options.allowedMimeTypes].sort()))throw new Error('Portfolio storage verification failed');
+console.log('Portfolio images stored privately with original bytes and no custom size cap');

@@ -1,0 +1,26 @@
+/* Loaded by the bell itself: never depend on a lazily loaded work screen. */
+.w-notifications{position:relative;display:flex;align-items:center;gap:10px;min-width:0}
+.w-notifications.is-open{z-index:90}
+.w-notifications .w-notification-panel:not(.is-mobile-dialog){position:absolute;inset:calc(100% + 12px) auto auto 0;width:min(380px,calc(100vw - 32px));max-height:min(480px,calc(100dvh - 140px));box-sizing:border-box;overflow:auto;overscroll-behavior:contain;z-index:90}
+.w-notifications .w-notification-panel hgroup{display:grid;gap:4px;margin:0;min-width:0}
+.w-notifications .w-notification-panel hgroup p{margin:0;font-size:12px;font-weight:400;line-height:1.6}
+.w-notifications:not(.is-compact) .w-notification-panel{--notification-surface:#fff;--notification-ink:#211b1b;--notification-muted:#776767;--notification-line:#ede5e5;padding:0 16px 8px;border:1px solid #e4dada;border-radius:16px;background:var(--notification-surface);color:var(--notification-ink);box-shadow:0 18px 48px #0004;backdrop-filter:none;direction:rtl;text-align:start}
+.w-notifications:not(.is-compact) .w-notification-panel>header{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0;padding:16px 0;background:var(--notification-surface);border-bottom:1px solid var(--notification-line)}
+.w-notifications:not(.is-compact) .w-notification-panel>header h3{margin:0;color:var(--notification-ink);font-size:17px;font-weight:700;line-height:1.5}
+.w-notifications:not(.is-compact) .w-notification-panel hgroup p{color:var(--notification-muted)}
+.w-notifications:not(.is-compact) .w-notification-panel>header>div{display:flex;flex-wrap:nowrap;align-items:center;gap:4px;flex-shrink:0}
+.w-notifications:not(.is-compact) .w-notification-panel>header button{display:grid;place-items:center;min-height:44px;width:44px;padding:0;border:1px solid transparent;border-radius:10px;background:transparent;color:#655151}
+.w-notifications:not(.is-compact) .w-notification-panel>header button:hover{background:#fff0f0;color:#b10606}
+.w-notifications:not(.is-compact) .w-notification-panel>button{position:relative;display:block;width:100%;min-height:76px;margin:0;padding:16px 16px 16px 10px;text-align:start;white-space:normal;border:0;border-bottom:1px solid var(--notification-line);border-radius:0;background:transparent;color:var(--notification-ink);font-size:14px;line-height:1.7}
+.w-notifications:not(.is-compact) .w-notification-panel>button:last-child{border-bottom:0}
+.w-notifications:not(.is-compact) .w-notification-panel>button:hover{background:#faf5f5}
+.w-notifications:not(.is-compact) .w-notification-panel>button.w-unread{background:#fff7f7}
+.w-notifications:not(.is-compact) .w-notification-panel>button.w-unread::before{content:'';position:absolute;inset-inline-start:2px;top:25px;width:6px;height:6px;border-radius:50%;background:#b10606}
+.w-notifications:not(.is-compact) .w-notification-panel .w-notification-summary{display:grid;gap:6px;white-space:normal;overflow-wrap:anywhere}
+.w-notifications:not(.is-compact) .w-notification-panel .w-notification-summary strong{color:var(--notification-ink)}
+.w-notifications:not(.is-compact) .w-notification-panel :is(small,.w-notification-status){color:var(--notification-muted)}
+.w-notifications:not(.is-compact) .w-notification-panel>p{margin:12px 0;padding:16px 8px;color:var(--notification-muted);font-size:14px;line-height:1.8}
+.w-notifications:not(.is-compact) .w-notification-panel>p[role=alert]{background:#fff1f1;color:#a00606;border-radius:8px}
+.w-notifications:not(.is-compact) .w-notification-panel .w-notification-empty{text-align:center;padding-block:32px}
+.a-admin .w-notifications .w-notification-panel button:focus-visible{outline:2px solid #b10606;outline-offset:-3px}
+.w-notifications:not(.is-compact) dialog.w-notification-panel.is-mobile-dialog{padding:env(safe-area-inset-top,0px) 20px max(20px,env(safe-area-inset-bottom,0px));border:0;border-radius:0;box-shadow:none}

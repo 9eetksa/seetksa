@@ -1,0 +1,5 @@
+project_id = "seet"
+
+[functions.work-notifications]
+# This private worker authenticates the database dispatcher secret itself
+verify_jwt = false

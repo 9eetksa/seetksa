@@ -1,0 +1,66 @@
+﻿{
+    "executedAt":  "2026-09-21T00:57:17.8916839+03:00",
+    "node":  "v20.20.2",
+    "inputs":  [
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\Studio.jsx",
+                       "Hash":  "0C41F868A3EEECA943D62CAABB19E6A793AD1CFA2D67F60F7ED227324A36D21D"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\auth\\Portal.jsx",
+                       "Hash":  "75FC4C0D068A363EA1A90A6CD627F13F7FE8B8F05C2D5A6C142247B13E71BDA8"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\seet.css",
+                       "Hash":  "6376EEBF1700EE3756D05C80E714B51AF1B9AA9D1AA7EE75E360B5FBC3C15BAC"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\brand-fonts.css",
+                       "Hash":  "4DCE0829B4BFB0FE8E064A2A31959A6700A5AEAE51B1811D3FE96984EF2F051F"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\brand-typography.css",
+                       "Hash":  "0E9FAE4FD78CD74FEF81EADCC846149115194A0E1D37A3F304EBE33EACFF4C6D"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\studio.css",
+                       "Hash":  "BCF0B2BFC2B3F79A31CA701FDD4028848A1448CD5B380365A06A0F46DD431EC6"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\auth\\portal.css",
+                       "Hash":  "EB3FE4292975065D0EB65C5FC98EB09157F658B76BB26A6FBC888FB93A7EEAE5"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\admin\\platform.jsx",
+                       "Hash":  "6B1486E86210F3B98D8C200A3E36CEE0FFF204C4C9F5C5B654DDC5D93C861655"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\src\\main.jsx",
+                       "Hash":  "FD7D725EC094A97D678A54666C2609989F5AE5842CB8D17301FA2D16D96EBA3A"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\index.html",
+                       "Hash":  "8FD39415C680E799E14ABBD272B374B5C758F4EDA4A38CFD20355BF678CB3751"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\package.json",
+                       "Hash":  "E2B6D05D325AE068C9B4B80C55B87B0193F50899F8916A7FA250213F0EEB3369"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\package-lock.json",
+                       "Hash":  "F496A976B59DE53F0A087A0CFA9EA616BA99A7C53B265D5680D3132BD7A91F60"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\public\\fonts\\GretaArabic.woff2",
+                       "Hash":  "9EC03E2F4A578550A89D13CDFCB0F0082614C53D20D39BA70B4C7FC9AC0A43D4"
+                   },
+                   {
+                       "Path":  "C:\\Projects\\seet\\public\\fonts\\Lifta-Black.woff2",
+                       "Hash":  "A7869F3050BF35288213FFF00C80297564C35E45F0F5E6A17E21B06A58C9CF0D"
+                   }
+               ],
+    "buildLog":  ".tools/seet-redesign-build.log",
+    "renderLog":  ".tools/seet-redesign-check.log",
+    "httpLog":  ".tools/seet-redesign-http.json",
+    "protectedSourceBaseline":  ".tools/redesign-before/preserved.json"
+}

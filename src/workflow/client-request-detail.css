@@ -1,0 +1,68 @@
+/* Compact client details only  Shared employee and admin roadmaps keep their layout */
+.c-detail{gap:16px}
+.c-detail .c-detail-head{padding:18px 22px;align-items:center}
+.c-detail-head>div:first-child{min-width:0}
+.c-detail .c-detail-head h2{font-size:var(--brand-type-subheading);margin-top:6px;line-height:1.5}
+.c-detail-head>.c-tags{flex-shrink:0;max-width:240px}
+.c-detail .c-detail-head .c-kicker{font-size:var(--brand-type-data)}
+.c-request-info{display:grid;gap:16px;padding:20px 22px;min-width:0;border:1px solid var(--c-border);border-radius:13px;background:#110f0fd9}
+.c-request-info-main{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:28px}
+.c-request-info h3{font-size:var(--brand-type-lead)}
+.c-request-info :is(h4,dt){font-size:var(--brand-type-data);font-weight:var(--brand-weight-subheading);color:var(--c-muted)}
+.c-request-description{min-width:0;display:grid;gap:6px;align-content:start}
+.c-request-description .c-brief{line-height:var(--brand-leading-body)}
+.c-request-info .c-request-brief-toggle{justify-self:start;min-height:44px;padding:5px 0;border:0;background:transparent;color:var(--c-accent);font-size:var(--brand-type-data)}
+.c-request-dates{display:flex;flex-wrap:wrap;gap:16px 24px;margin:0;padding-inline-start:24px;border-inline-start:1px solid var(--c-border)}
+.c-request-dates>div{display:grid;gap:6px;align-content:start}
+.c-request-dates dd{margin:0;font-size:var(--brand-type-body);font-weight:var(--brand-weight-subheading);font-variant-numeric:tabular-nums}
+.c-request-dates .c-request-date-note{color:var(--c-muted);font-size:var(--brand-type-data);font-weight:var(--brand-weight-body)}
+.c-detail .request-roadmap-compact{margin:0;padding:18px 22px 6px;background:#110f0fd9;border-radius:13px}
+.c-detail .request-roadmap-heading{margin-bottom:16px;gap:8px}
+.c-detail .request-roadmap-heading h3{margin:0;font-size:var(--brand-type-lead)}
+.c-detail .request-roadmap-track{padding:0;overflow:visible;flex-wrap:nowrap}
+.c-detail .request-roadmap-track>li{flex:1 1 0;min-width:0}
+.c-detail .request-roadmap-track>li:not(:last-child)::after{top:15px;inset-inline-start:calc(50% + 19px);width:calc(100% - 38px)}
+.c-detail .request-roadmap-track button{justify-content:flex-start;min-height:78px;padding:0 4px 10px;gap:8px;line-height:1.5;border-radius:0}
+.c-detail .request-roadmap-track button small{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.c-detail .request-roadmap-dot{width:30px;height:30px}
+.c-detail .request-roadmap-detail{padding:14px 0;gap:10px;border:0;border-top:1px solid var(--c-border);border-radius:0;background:transparent}
+.c-detail .request-roadmap-now{gap:4px}
+.c-detail .request-roadmap-now>span{display:none}
+.c-detail .request-roadmap-now strong{font-size:var(--brand-type-body);font-weight:var(--brand-weight-subheading)}
+.c-detail .request-roadmap-now p{font-size:var(--brand-type-data)}
+.c-detail .request-roadmap-return{padding:6px 0;border:0;background:transparent;font-size:var(--brand-type-data)}
+.c-detail .c-journey-dates{margin:0;font-size:var(--brand-type-data)}
+.c-detail .c-journey-departments{gap:10px}
+.c-detail .c-journey-department{padding:12px}
+.c-detail .c-journey-department :is(h4,h5){font-size:var(--brand-type-body)}
+.c-detail .c-journey-history{margin:0;border-top:1px solid var(--c-border)}
+.c-detail .c-journey-history>summary{padding-block:10px;font-size:var(--brand-type-data)}
+.c-detail .c-journey-history>summary>span{margin-inline-start:8px;font-variant-numeric:tabular-nums}
+.c-detail .c-journey-history-list{padding-bottom:14px}
+.c-detail .c-deliveries{gap:12px;margin-top:4px}
+.c-detail .c-deliveries .c-section-heading{gap:4px;margin:0}
+.c-detail .c-deliveries .c-section-heading :is(h4,p){font-size:var(--brand-type-data)}
+.c-detail .c-delivery{padding:16px;gap:14px}
+.c-detail .c-delivery>div:first-child{gap:8px}
+.c-detail .c-delivery h4{font-size:var(--brand-type-body)}
+.c-detail .c-delivery .c-actions{padding-top:12px}
+@media(max-width:1100px){
+ .c-request-info-main{grid-template-columns:minmax(0,1fr);gap:14px}
+ .c-request-dates{padding:12px 0 0;border-inline-start:0;border-top:1px solid var(--c-border)}
+}
+@media(max-width:700px){
+ .c-detail{gap:12px}
+ .c-detail .c-detail-head{padding:16px;align-items:flex-start;gap:12px}
+ .c-detail-head>.c-tags{max-width:100%}
+ .c-request-info{padding:16px;gap:14px}
+ .c-request-dates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .c-detail .request-roadmap-compact{padding:16px 12px 4px}
+ .c-detail .request-roadmap-heading{flex-direction:row;align-items:baseline;flex-wrap:wrap;margin-bottom:18px}
+ .c-detail .request-roadmap-track button{min-height:80px;padding-inline:1px;gap:7px;font-size:var(--brand-type-data)}
+ .c-detail .request-roadmap-track>li:nth-child(3)::after{display:block}
+ .c-detail .c-journey-dates{display:flex;gap:8px 16px}
+ .c-detail .c-journey-date{display:flex;gap:6px}
+ .c-detail .c-delivery{padding:12px}
+}
+.c-department-task-state{display:block;color:var(--c-muted);font-size:var(--brand-type-caption);font-weight:var(--brand-weight-body)}
+.c-department-task-state.needs-info{color:var(--c-warning,#ffd082)}

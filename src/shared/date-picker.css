@@ -1,0 +1,56 @@
+.pv-date {
+  --date-surface: #151313;
+  --date-deep: #0e0c0c;
+  --date-selected: #312b2b;
+  --date-rule: #856666;
+  --date-text: #f4f0f0;
+  --date-muted: #ccb8b8;
+  --date-accent: #ed9191;
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  font-family: var(--brand-font-arabic);
+  font-size: var(--brand-type-body);
+  color: var(--date-text);
+}
+.pv-date .pv-date-label { display: block; margin-bottom: 8px; font-weight: var(--brand-weight-subheading); }
+.pv-date button { font: inherit; letter-spacing: normal; cursor: pointer; }
+.pv-date .pv-date-trigger { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 52px; padding: 12px 16px; border: 1px solid var(--date-rule); border-radius: 10px; background: var(--date-deep); color: var(--date-text); text-align: start; }
+.pv-date-trigger svg { flex-shrink: 0; transition: transform 160ms ease; }
+.pv-date-trigger[aria-expanded='true'] svg { transform: rotate(180deg); }
+.pv-date .pv-date-placeholder, .pv-date .pv-date-hint { color: var(--date-muted); }
+.pv-date .pv-date-hint { display: block; margin-top: 6px; font-size: var(--brand-type-data); font-weight: var(--brand-weight-body); }
+.pv-date .pv-date-validation { position: absolute; width: 1px; min-width: 0; height: 1px; min-height: 0; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); border: 0; }
+.pv-date .pv-date-panel { position: fixed; inset: 0; width: min(380px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 16px; box-sizing: border-box; overflow: auto; border: 1px solid var(--date-rule); border-radius: 18px; background: var(--date-surface); color: var(--date-text); font: inherit; text-align: start; box-shadow: 0 24px 80px #0008; scrollbar-width: none; -ms-overflow-style: none; overscroll-behavior: contain; }
+.pv-date-panel::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.pv-date-panel::backdrop { background: #080707d1; backdrop-filter: blur(4px); }
+.pv-date .pv-date-heading { display: flex; align-items: start; justify-content: space-between; gap: 8px; }
+.pv-date-heading > div { display: grid; gap: 4px; }
+.pv-date-heading strong { font-size: var(--brand-type-body); font-weight: var(--brand-weight-heading); }
+.pv-date-heading span { color: var(--date-muted); font-size: var(--brand-type-data); font-weight: var(--brand-weight-body); }
+.pv-date .pv-date-close { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; padding: 0; background: transparent; border: 0; border-radius: 8px; color: var(--date-muted); }
+.pv-date-wheels { display: grid; grid-template-columns: 1fr 1.35fr 1fr; gap: 8px; margin-block: 10px; }
+.pv-date-wheel { min-width: 0; text-align: center; }
+.pv-date-wheel-label { color: var(--date-muted); font-size: var(--brand-type-data); }
+.pv-date .pv-date-step { display: grid; place-items: center; width: 100%; height: 44px; padding: 0; border: 0; border-radius: 8px; background: transparent; color: var(--date-muted); }
+.pv-date-wheel-window { position: relative; }
+.pv-date-wheel-window::before { content: ''; pointer-events: none; position: absolute; inset: 48px 0; border-block: 1px solid var(--date-accent); border-radius: 6px; background: var(--date-selected); }
+.pv-date-wheel-scroll { position: relative; height: 144px; padding-block: 48px; box-sizing: border-box; overflow-y: auto; overscroll-behavior-y: contain; scroll-snap-type: y mandatory; scrollbar-width: none; -ms-overflow-style: none; touch-action: pan-y; user-select: none; cursor: grab; border-radius: 6px; }
+.pv-date-wheel-scroll::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.pv-date-wheel-scroll:active { cursor: grabbing; }
+.pv-date-option { height: 48px; display: grid; place-items: center; scroll-snap-align: center; color: var(--date-muted); font-size: var(--brand-type-body); font-weight: var(--brand-weight-body); }
+.pv-date-option[aria-selected='true'] { color: var(--date-accent); font-weight: var(--brand-weight-heading); }
+.pv-date .pv-date-preview { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 10px; padding: 10px 0; margin-bottom: 4px; border-top: 1px solid var(--date-rule); }
+.pv-date-preview span { color: var(--date-muted); font-size: var(--brand-type-data); }
+.pv-date-preview strong { font-weight: var(--brand-weight-heading); font-size: var(--brand-type-body); }
+.pv-date-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.pv-date .pv-date-actions button { min-height: 46px; padding: 10px 16px; border: 1px solid var(--date-rule); border-radius: 8px; color: var(--date-text); background: transparent; }
+.pv-date .pv-date-actions .pv-date-confirm { display: flex; align-items: center; justify-content: center; gap: 8px; flex: 1; border-color: var(--date-accent); background: var(--date-accent); color: var(--date-deep); font-weight: var(--brand-weight-subheading); }
+.pv-date button:focus-visible, .pv-date-wheel-scroll:focus-visible { outline: 2px solid var(--date-accent); outline-offset: 3px; }
+.pv-date button:hover:enabled { filter: brightness(1.12); }
+.pv-date button:disabled { opacity: .45; cursor: not-allowed; }
+.pv-date .pv-date-error { display: block; color: #ffc0b6; font-size: var(--brand-type-data); margin-top: 6px; }
+.pv-date-trigger[aria-invalid='true'] { border-color: #ffc0b6; }
+@media (max-width: 480px) { .pv-date .pv-date-panel { padding: 12px; } .pv-date-wheels { gap: 4px; } }
+@media (max-height: 560px) { .pv-date .pv-date-panel { padding: 12px; } .pv-date .pv-date-step { display: none; } .pv-date-wheels { margin-block: 2px; } .pv-date .pv-date-preview { padding-block: 6px; } }
+@media (prefers-reduced-motion: reduce) { .pv-date *, .pv-date *::before { transition: none; scroll-behavior: auto; } }

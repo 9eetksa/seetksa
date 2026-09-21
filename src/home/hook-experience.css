@@ -1,0 +1,210 @@
+.s-site.pv-intro-page {
+  height: 100svh;
+  height: 100dvh;
+  background: #ffffff;
+  overflow: visible;
+}
+
+.s-site.pv-intro-page::before,
+.s-site.pv-intro-page::after {
+  content: none;
+}
+
+.pv-intro-page > .pv-hook {
+  min-height: 0;
+}
+
+.s-dialog.s-intro-dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100svh;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--brand-green);
+  overscroll-behavior: contain;
+}
+
+.s-dialog.s-intro-dialog > .pv-hook {
+  height: 100%;
+  min-height: 0;
+}
+
+.pv-hook {
+  --hook-ink: var(--brand-green);
+  --hook-paper: #ffffff;
+  --hook-accent: var(--brand-mint);
+  --hook-edge: #1e1a1a40;
+  --hook-gutter: clamp(12px, 2vw, 32px);
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  height: 100dvh;
+  min-height: 320px;
+  isolation: isolate;
+  color: var(--hook-ink);
+  background: var(--hook-paper);
+}
+
+.pv-hook-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.pv-hook[data-state="error"] .pv-hook-frame {
+  visibility: hidden;
+}
+
+.pv-hook-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.pv-hook-fallback > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .25;
+}
+
+.pv-hook[data-state="loading"] .pv-hook-fallback {
+  visibility: hidden;
+}
+
+.pv-hook-status {
+  position: relative;
+  max-width: min(28rem, calc(100% - 32px));
+  padding: 20px 28px;
+  text-align: center;
+  color: var(--hook-ink);
+  background: var(--hook-paper);
+  pointer-events: auto;
+}
+
+.s-site .pv-hook-status p {
+  margin: 0;
+  color: inherit;
+  font-size: var(--brand-type-body);
+  font-weight: var(--brand-weight-body);
+  line-height: var(--brand-leading-body);
+}
+
+.s-site .pv-hook-status p + p {
+  margin-top: 8px;
+}
+
+.pv-hook-status button,
+.pv-hook-controls :is(button, a) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 0;
+  color: inherit;
+  font-family: var(--brand-font-arabic);
+  font-size: var(--brand-type-body);
+  font-weight: var(--brand-weight-subheading);
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pv-hook-status button {
+  margin-top: 16px;
+  background: var(--hook-accent);
+}
+
+.pv-hook-controls {
+  position: absolute;
+  top: max(var(--hook-gutter), env(safe-area-inset-top));
+  inset-inline-end: max(var(--hook-gutter), env(safe-area-inset-left));
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  max-width: calc(100% - var(--hook-gutter) * 2);
+  padding: 2px;
+  border: 1px solid var(--hook-edge);
+  border-radius: 4px;
+  background: rgb(255 255 255 / 64%);
+  border-color: rgb(255 255 255 / 24%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background-color 180ms ease;
+}
+
+.pv-hook-controls:hover,
+.pv-hook-controls:focus-within {
+  background: rgb(255 255 255 / 92%);
+}
+
+.pv-hook-controls :is(button, a) {
+  background: transparent;
+}
+
+.pv-hook-controls :is(button, a):hover,
+.pv-hook-status button:hover {
+  background: var(--hook-accent);
+}
+
+.pv-hook-controls button:disabled {
+  opacity: .5;
+  cursor: default;
+  background: transparent;
+}
+
+.pv-hook :focus-visible {
+  outline: 2px solid var(--hook-ink);
+  outline-offset: 3px;
+}
+
+.pv-hook-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .pv-hook-controls :is(button, a) {
+    padding-inline: 10px;
+  }
+
+  .pv-hook-controls button > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pv-hook-controls {
+    transition: none;
+  }
+
+  .pv-hook {
+    scroll-behavior: auto;
+  }
+}

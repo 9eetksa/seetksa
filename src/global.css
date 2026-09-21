@@ -1,0 +1,44 @@
+/* Foundational layout rules must load before every lazy route */
+:root {
+  --s-bg: #0d0b0b;
+  --s-deep: #090808;
+  --s-panel: #171414;
+  --s-white: #f4f2f2;
+  --s-lime: #f28c8c;
+  --s-muted: #c6b8b8;
+  --s-rule: #403737;
+  --s-radius: 5px;
+  --s-space: clamp(20px, 4.9vw, 78px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-width: 0;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+/* Platform-wide mirror of the required Studio scrollbar rule for lazy routes */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}

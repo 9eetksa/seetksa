@@ -1,0 +1,1345 @@
+/* Responsive preview mirrors the existing homepage breakpoints */
+.a-canvas {
+  container-type: inline-size;
+  container-name: cms;
+}
+@container cms (min-width: 1700px) {
+  .s-hero-gallery {
+    margin-left: -70px;
+  }
+  .s-hero {
+    padding-top: 70px;
+    padding-bottom: 38px;
+  }
+  .s-hero h1 {
+    font-size: 86px;
+  }
+  .s-orbit-card .s-project-image {
+    height: 390px;
+  }
+  .s-orbit-card:nth-child(2) .s-project-image,
+  .s-orbit-card:nth-child(4) .s-project-image {
+    height: 455px;
+  }
+  .s-orbit-card:nth-child(3) .s-project-image {
+    height: 418px;
+  }
+  .s-project-image {
+    height: 345px;
+  }
+  .s-services {
+    padding-block: 58px;
+  }
+  .s-service-card {
+    min-height: 230px;
+  }
+  .s-about,
+  .s-about-layout {
+    min-height: 350px;
+  }
+  .s-process {
+    padding-block: 42px;
+  }
+  .s-contact {
+    padding-block: 35px;
+  }
+}
+@container cms (max-width: 1250px) {
+  .s-header {
+    gap: 20px;
+    height: 80px;
+  }
+  .s-logo {
+    width: 115px;
+  }
+  .s-nav {
+    gap: 18px;
+  }
+  .s-nav a {
+    font-size: 10px;
+  }
+  .s-header-actions .s-btn {
+    font-size: 9px;
+    padding: 8px 10px;
+  }
+  .s-explore-link {
+    display: none;
+  }
+  .s-hero {
+    padding-top: 50px;
+    min-height: 490px;
+  }
+  .s-hero:before {
+    inset-block-start: -80px;
+  }
+  .s-hero-copy > p {
+    font-size: 13px;
+  }
+  .s-hero-ctas {
+    gap: 13px;
+  }
+  .s-hero-ctas > .s-btn {
+    font-size: 12px;
+    padding-inline: 15px;
+    gap: 15px;
+  }
+  .s-hero h1 {
+    font-size: 58px;
+  }
+  .s-orbit-cards {
+    gap: 12px;
+  }
+  .s-orbit-card .s-project-image {
+    height: 265px;
+  }
+  .s-orbit-card:nth-child(2) .s-project-image,
+  .s-orbit-card:nth-child(4) .s-project-image {
+    height: 325px;
+  }
+  .s-orbit-card:nth-child(3) .s-project-image {
+    height: 285px;
+  }
+  .s-orbit-card .s-project-caption h3 {
+    font-size: 14px;
+  }
+  .s-orbit-card .s-project-caption p {
+    font-size: 9px;
+  }
+  .s-section-layout {
+    grid-template-columns: 24% minmax(0, 1fr);
+    gap: 25px;
+  }
+  .s-section-intro h2 {
+    font-size: 27px;
+  }
+  .s-section-intro > p {
+    font-size: 11px;
+  }
+  .s-service-grid {
+    gap: 8px;
+  }
+  .s-service-card {
+    min-height: 180px;
+    padding-inline: 5px;
+  }
+  .s-service-card h3 {
+    font-size: 12px;
+  }
+  .s-service-card p {
+    font-size: 11px;
+  }
+  .s-project-grid {
+    gap: 12px;
+  }
+  .s-project-image {
+    height: 250px;
+  }
+  .s-project-caption h3 {
+    font-size: 15px;
+  }
+  .s-project-caption p {
+    font-size: 9px;
+  }
+  .s-project-type {
+    font-size: 9px;
+  }
+  .s-project-open {
+    width: 29px;
+    height: 29px;
+    left: 8px;
+  }
+  .s-about-layout {
+    grid-template-columns: 100px 360px 1fr;
+    gap: 25px;
+  }
+  .s-about-copy h2 {
+    font-size: 30px;
+  }
+  .s-about-emblem > svg {
+    width: 80px;
+    height: 80px;
+  }
+  .s-process-list {
+    gap: 15px;
+  }
+  .s-process-list li:not(:last-child):after {
+    left: calc(-50% - 7px);
+  }
+  .s-process-list h3 {
+    font-size: 15px;
+  }
+  .s-process-list p {
+    font-size: 11px;
+  }
+  .s-process .s-section-intro h2 {
+    font-size: 25px;
+  }
+  .s-contact-layout {
+    gap: 20px;
+    grid-template-columns: 20% minmax(0, 1fr) 22%;
+  }
+  .s-contact .s-section-intro h2 {
+    font-size: 28px;
+  }
+  .s-form {
+    padding: 16px;
+  }
+  .s-form-grid {
+    gap: 13px 10px;
+  }
+  .s-form label {
+    font-size: 9px;
+  }
+  .s-form-actions > small {
+    font-size: 8px;
+  }
+  .s-form-actions > .s-btn {
+    min-width: 125px;
+  }
+  .s-contact-art h3 {
+    font-size: 25px;
+  }
+  .s-portals-layout {
+    gap: 15px;
+    grid-template-columns: 19% 1fr 1fr 25%;
+  }
+  .s-portal-card {
+    padding-right: 12px;
+    gap: 10px;
+    min-height: 135px;
+  }
+  .s-portal-card b {
+    font-size: 15px;
+  }
+  .s-portal-card small {
+    font-size: 9px;
+  }
+  .s-portal-icon {
+    width: 48px;
+    height: 58px;
+    flex-shrink: 0;
+  }
+  .s-portals-copy h2 {
+    font-size: 20px;
+  }
+  .s-portals-copy p {
+    font-size: 11px;
+  }
+  .s-footer nav {
+    gap: 15px;
+  }
+  .s-footer-word > span {
+    font-size: 41px;
+  }
+}
+@container cms (max-width: 950px) {
+  .s-header {
+    gap: 20px;
+  }
+  .s-nav {
+    gap: 14px;
+  }
+  .s-portal-link {
+    display: none;
+  }
+  .s-hero h1 {
+    font-size: 48px;
+  }
+  .s-hero-copy > p {
+    font-size: 12px;
+  }
+  .s-hero-ctas {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .s-hero-signature {
+    margin-top: 30px;
+  }
+  .s-orbit-cards {
+    gap: 8px;
+  }
+  .s-orbit-card .s-project-image {
+    height: 240px;
+  }
+  .s-orbit-card:nth-child(2) .s-project-image,
+  .s-orbit-card:nth-child(4) .s-project-image {
+    height: 280px;
+  }
+  .s-orbit-card:nth-child(3) .s-project-image {
+    height: 255px;
+  }
+  .s-project-tag {
+    font-size: 7px;
+    padding: 4px 6px;
+  }
+  .s-orbit-card .s-project-caption {
+    padding-inline: 8px;
+  }
+  .s-orbit-card .s-project-caption h3 {
+    font-size: 12px;
+  }
+  .s-orbit-card .s-project-caption p {
+    font-size: 8px;
+  }
+  .s-hero {
+    min-height: 445px;
+    padding-top: 35px;
+  }
+  .s-section-layout {
+    grid-template-columns: 25% minmax(0, 1fr);
+    gap: 18px;
+  }
+  .s-service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .s-service-card {
+    min-height: 145px;
+    padding-block: 16px;
+  }
+  .s-service-card h3 {
+    font-size: 14px;
+  }
+  .s-service-card p {
+    margin-top: 8px;
+    max-width: 110px;
+  }
+  .s-services {
+    padding-block: 30px;
+  }
+  .s-section-intro h2 {
+    font-size: 24px;
+  }
+  .s-project-grid {
+    gap: 9px;
+  }
+  .s-project-image {
+    height: 223px;
+  }
+  .s-project-caption h3 {
+    font-size: 13px;
+  }
+  .s-project-caption p {
+    font-size: 8px;
+  }
+  .s-project > .s-project-image .s-project-caption {
+    padding-left: 8px;
+    padding-bottom: 48px;
+  }
+  .s-project-open {
+    bottom: 12px;
+  }
+  .s-project-type {
+    font-size: 8px;
+  }
+  .s-about-layout {
+    grid-template-columns: 80px 320px 1fr;
+    gap: 18px;
+  }
+  .s-about-copy p {
+    font-size: 11px;
+  }
+  .s-about-art {
+    right: 35%;
+  }
+  .s-about-signature {
+    font-size: 7px;
+  }
+  .s-process-list {
+    gap: 10px;
+  }
+  .s-process-icon {
+    width: 51px;
+    height: 51px;
+  }
+  .s-process-list li:not(:last-child):after {
+    top: 25px;
+    right: calc(50% + 30px);
+  }
+  .s-process-list h3 {
+    font-size: 13px;
+  }
+  .s-process-list p {
+    font-size: 10px;
+  }
+  .s-process .s-section-intro h2 {
+    font-size: 23px;
+  }
+  .s-contact-layout {
+    grid-template-columns: 25% minmax(0, 1fr);
+  }
+  .s-contact-art {
+    display: none;
+  }
+  .s-contact .s-section-intro h2 {
+    font-size: 28px;
+  }
+  .s-portals-layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .s-portal-manifesto {
+    display: none;
+  }
+  .s-portals-copy {
+    order: -1;
+  }
+  .s-portal-card {
+    min-height: 130px;
+  }
+  .s-portals-copy h2 {
+    font-size: 22px;
+  }
+  .s-footer-top {
+    flex-wrap: wrap;
+  }
+  .s-footer nav {
+    order: 4;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .s-footer nav a {
+    font-size: 11px;
+  }
+  .s-newsletter {
+    width: 240px;
+  }
+  .s-footer-word > span {
+    font-size: 45px;
+  }
+}
+@container cms (max-width: 700px) {
+  .s-site {
+    --s-space: 22px;
+  }
+  .s-site {
+    background-size: auto 1200px;
+  }
+  .s-header {
+    height: 78px;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .s-logo {
+    width: 105px;
+  }
+  .s-header-actions {
+    gap: 16px;
+  }
+  .s-header-actions .s-btn {
+    font-size: 10px;
+    padding-inline: 12px;
+    min-height: 44px;
+  }
+  .s-menu {
+    display: flex;
+    width: 44px;
+    height: 44px;
+  }
+  .s-nav {
+    display: none;
+    position: absolute;
+    top: 73px;
+    right: 0;
+    left: 0;
+    background: #141111f5;
+    border: 1px solid var(--s-rule);
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 20px 40px #0006;
+  }
+  .s-nav.is-open {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 20px;
+  }
+  .s-nav a {
+    font-size: 14px;
+    min-height: 48px;
+    padding-inline: 10px;
+  }
+  .s-nav a[aria-current]:after {
+    right: 10px;
+    left: 10px;
+  }
+  .s-hero {
+    padding-top: 30px;
+    padding-bottom: 18px;
+    min-height: 0;
+  }
+  .s-hero:before {
+    inset-block-start: -78px;
+    background-position: 36% top;
+    background-size: auto 100%;
+  }
+  .s-hero-layout {
+    grid-template-columns: 1fr;
+  }
+  .s-hero-copy {
+    padding-left: 0;
+  }
+  .s-hero-copy > .s-eyebrow {
+    font-size: 8px;
+    margin-bottom: 17px;
+    letter-spacing: 2px;
+  }
+  .s-hero h1 {
+    font-size: clamp(43px, 10.5cqw, 66px);
+    line-height: 1.22;
+    letter-spacing: -1.5px;
+  }
+  .s-hero-copy > p {
+    font-size: 13px;
+    max-width: 420px;
+    margin-top: 18px;
+  }
+  .s-hero-ctas {
+    margin-top: 23px;
+    gap: 22px;
+  }
+  .s-hero-ctas > .s-btn {
+    font-size: 12px;
+    min-height: 46px;
+    padding-inline: 20px;
+  }
+  .s-story-button {
+    font-size: 11px;
+    gap: 10px;
+  }
+  .s-story-button > .s-round {
+    width: 44px;
+    height: 44px;
+  }
+  .s-hero-signature {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    font-size: 6px;
+    letter-spacing: 1px;
+    max-width: 80px;
+  }
+  .s-hero-gallery {
+    margin: 45px -8px 0;
+    padding: 0;
+  }
+  .s-orbit-cards {
+    gap: 9px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-top: 7px;
+  }
+  .s-orbit-card .s-project-image {
+    height: 200px;
+  }
+  .s-orbit-card:nth-child(2) .s-project-image,
+  .s-orbit-card:nth-child(4) .s-project-image {
+    height: 235px;
+  }
+  .s-orbit-card:nth-child(3) .s-project-image {
+    height: 215px;
+  }
+  .s-orbit-card .s-project-caption {
+    padding: 10px 7px;
+  }
+  .s-orbit-card .s-project-caption h3 {
+    font-size: 11px;
+  }
+  .s-orbit-card .s-project-caption p {
+    font-size: 7px;
+    line-height: 1.6;
+  }
+  .s-project-tag {
+    right: 4px;
+    top: 8px;
+    font-size: 6px;
+    padding: 3px 5px;
+    max-width: calc(100% - 8px);
+  }
+  .s-orbit-line {
+    top: -20px;
+    right: 0;
+    height: 120px;
+  }
+  .s-orbit-line svg {
+    width: 27px;
+    height: 27px;
+    right: 5px;
+    top: 3px;
+  }
+  .s-gallery-bottom {
+    margin-top: 22px;
+    gap: 12px;
+  }
+  .s-gallery-bottom .s-carousel-controls {
+    gap: 14px;
+  }
+  .s-carousel-dots button {
+    width: 24px;
+  }
+  .s-gallery-note {
+    font-size: 8px;
+    padding-right: 12px;
+    padding-left: 0;
+  }
+  .s-ribbon {
+    height: 46px;
+  }
+  .s-ribbon > div {
+    gap: 27px;
+  }
+  .s-ribbon span {
+    font-size: 17px;
+  }
+  .s-ribbon span[lang] {
+    font-size: 12px;
+  }
+  .s-ribbon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .s-section-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .s-services {
+    padding-block: 32px;
+  }
+  .s-kicker {
+    font-size: 11px;
+    margin-bottom: 11px;
+  }
+  .s-section-intro h2 {
+    font-size: 29px;
+  }
+  .s-section-intro > p {
+    font-size: 12px;
+    max-width: 360px;
+    margin-top: 13px;
+  }
+  .s-service-grid {
+    gap: 10px;
+  }
+  .s-service-card {
+    min-height: 150px;
+    padding: 20px 7px 17px;
+  }
+  .s-service-icon {
+    width: 29px;
+    height: 29px;
+    margin-bottom: 12px;
+  }
+  .s-service-card h3 {
+    font-size: 13px;
+  }
+  .s-service-card p {
+    font-size: 11px;
+    margin-top: 11px;
+    max-width: 80px;
+  }
+  .s-work {
+    padding-block: 29px;
+  }
+  .s-work .s-section-intro {
+    position: relative;
+    padding: 0;
+  }
+  .s-work .s-section-intro > p {
+    max-width: 260px;
+    padding-left: 10px;
+  }
+  .s-work .s-carousel-controls {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    gap: 9px;
+  }
+  .s-work .s-carousel-controls .s-round {
+    width: 40px;
+    height: 44px;
+  }
+  .s-all-work {
+    font-size: 10px;
+    padding-left: 95px;
+    margin-top: 8px;
+  }
+  .s-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px 12px;
+  }
+  .s-project-image {
+    height: 260px;
+  }
+  .s-project-caption h3 {
+    font-size: 16px;
+  }
+  .s-project-caption p {
+    font-size: 9px;
+  }
+  .s-project > .s-project-image .s-project-caption {
+    padding-left: 44px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+  }
+  .s-project-open {
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  .s-project-type {
+    font-size: 9px;
+    line-height: 1.6;
+    padding-top: 10px;
+  }
+  .s-about {
+    min-height: 490px;
+  }
+  .s-about-layout {
+    grid-template-columns: 63px 1fr;
+    gap: 18px;
+    min-height: 490px;
+    align-items: start;
+    padding-top: 32px;
+    padding-bottom: 235px;
+  }
+  .s-about-emblem > svg {
+    width: 56px;
+    height: 56px;
+  }
+  .s-about-emblem > .s-eyebrow {
+    font-size: 6px;
+    letter-spacing: 1px;
+    line-height: 1.9;
+  }
+  .s-about-emblem > .s-kicker {
+    font-size: 10px;
+  }
+  .s-about-copy h2 {
+    font-size: 30px;
+  }
+  .s-about-copy p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 14px;
+  }
+  .s-about-copy > .s-btn {
+    min-height: 44px;
+    margin-top: 14px;
+  }
+  .s-about-art {
+    inset: 190px 0 0;
+    background:
+      linear-gradient(var(--s-bg), transparent 30%),
+      url("/brand/seet-atmosphere.svg") 32% 54% / cover;
+  }
+  .s-about-signature {
+    position: absolute;
+    left: 22px;
+    bottom: 0;
+    font-size: 7px;
+    margin-bottom: 22px;
+  }
+  .s-process {
+    padding-block: 31px;
+  }
+  .s-process .s-section-intro h2 {
+    font-size: 29px;
+  }
+  .s-process-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 25px 15px;
+  }
+  .s-process-list li {
+    grid-column: span 2;
+  }
+  .s-process-list li:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .s-process-list li:after {
+    display: none;
+  }
+  .s-process-icon {
+    width: 57px;
+    height: 57px;
+  }
+  .s-process-list h3 {
+    font-size: 14px;
+  }
+  .s-process-list p {
+    font-size: 11px;
+    max-width: 115px;
+  }
+  .s-step-number {
+    font-size: 10px;
+  }
+  .s-contact {
+    padding-block: 30px;
+  }
+  .s-contact-layout {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+  .s-contact .s-section-intro h2 {
+    font-size: 31px;
+  }
+  .s-form {
+    padding: 19px 16px;
+  }
+  .s-form-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 17px 12px;
+  }
+  .s-form label {
+    font-size: 10px;
+  }
+  .s-form label:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .s-form label:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .s-form-wide {
+    grid-column: 1/-1;
+  }
+  .s-form input,
+  .s-form select,
+  .s-form textarea {
+    min-height: 44px;
+    font-size: 11px;
+    padding: 10px 8px;
+  }
+  .s-form textarea {
+    height: 80px;
+  }
+  .s-form-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 17px;
+  }
+  .s-form-actions > .s-btn {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .s-form-actions > small {
+    font-size: 9px;
+    justify-content: center;
+  }
+  .s-contact-art {
+    display: flex;
+    min-height: 190px;
+    background-position: 20% 92%;
+    background-size: cover;
+  }
+  .s-contact-art h3 {
+    font-size: 28px;
+  }
+  .s-portals {
+    padding-block: 28px;
+  }
+  .s-portals-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .s-portals-copy {
+    margin-bottom: 5px;
+  }
+  .s-portals-copy h2 {
+    font-size: 24px;
+  }
+  .s-portals-copy p {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .s-portal-card {
+    min-height: 125px;
+    padding: 24px 20px 24px 50px;
+    gap: 20px;
+  }
+  .s-portal-card b {
+    font-size: 20px;
+  }
+  .s-portal-card small {
+    font-size: 11px;
+  }
+  .s-portal-icon {
+    width: 60px;
+    height: 64px;
+  }
+  .s-portal-card .s-project-open {
+    width: 34px;
+    height: 34px;
+    left: 20px;
+  }
+  .s-footer {
+    padding-top: 30px;
+  }
+  .s-footer-top {
+    gap: 25px 18px;
+  }
+  .s-footer-word {
+    order: -2;
+  }
+  .s-footer-word > span {
+    font-size: 42px;
+  }
+  .s-behance {
+    order: -1;
+    margin-right: auto;
+    padding-left: 0;
+  }
+  .s-newsletter {
+    width: 100%;
+    border-left: 0;
+    padding: 0;
+  }
+  .s-newsletter > label {
+    font-size: 12px;
+  }
+  .s-newsletter input {
+    font-size: 12px;
+    padding: 12px;
+  }
+  .s-newsletter button {
+    width: 46px;
+    min-height: 46px;
+  }
+  .s-footer nav {
+    gap: 6px 18px;
+    justify-content: flex-start;
+  }
+  .s-footer nav a {
+    font-size: 11px;
+  }
+  .s-footer-bottom {
+    flex-direction: column-reverse;
+    gap: 10px;
+    font-size: 9px;
+    padding-block: 20px;
+  }
+  .s-dialog {
+    padding: 25px 20px;
+  }
+  .s-dialog h2 {
+    font-size: 25px;
+  }
+  .s-dialog > .s-kicker {
+    font-size: 9px;
+    padding-left: 35px;
+  }
+  .s-dialog-close {
+    top: 10px;
+    left: 10px;
+  }
+  .s-dialog p {
+    font-size: 13px;
+  }
+  .s-story-scene {
+    height: 220px;
+  }
+  .pv-stage-bottom > span {
+    display: none;
+  }
+}
+@container cms (max-width: 380px) {
+  .s-site {
+    --s-space: 16px;
+  }
+  .s-header-actions {
+    gap: 10px;
+  }
+  .s-logo {
+    width: 88px;
+  }
+  .s-header-actions .s-btn {
+    font-size: 9px;
+    padding-inline: 8px;
+    gap: 6px;
+  }
+  .s-hero h1 {
+    font-size: 43px;
+  }
+  .s-hero-copy > p {
+    font-size: 12px;
+  }
+  .s-hero-ctas {
+    gap: 14px;
+  }
+  .s-orbit-cards {
+    gap: 7px;
+  }
+  .s-orbit-card .s-project-image {
+    height: 171px;
+  }
+  .s-orbit-card:nth-child(2) .s-project-image,
+  .s-orbit-card:nth-child(4) .s-project-image {
+    height: 200px;
+  }
+  .s-orbit-card:nth-child(3) .s-project-image {
+    height: 185px;
+  }
+  .s-orbit-card .s-project-caption h3 {
+    font-size: 10px;
+  }
+  .s-orbit-card .s-project-caption p {
+    font-size: 6px;
+  }
+  .s-project-tag {
+    font-size: 5px;
+  }
+  .s-gallery-bottom {
+    gap: 5px;
+  }
+  .s-gallery-bottom .s-carousel-controls {
+    gap: 7px;
+  }
+  .s-carousel-dots button {
+    width: 24px;
+  }
+  .s-service-card h3 {
+    font-size: 11px;
+  }
+  .s-service-card p {
+    font-size: 10px;
+  }
+  .s-project-image {
+    height: 232px;
+  }
+  .s-project-caption h3 {
+    font-size: 14px;
+  }
+  .s-project-caption p {
+    font-size: 8px;
+  }
+  .s-about-layout {
+    grid-template-columns: 50px 1fr;
+    gap: 13px;
+  }
+  .s-about-copy h2 {
+    font-size: 26px;
+  }
+  .s-about-emblem > svg {
+    width: 45px;
+    height: 45px;
+  }
+  .s-form label {
+    font-size: 9px;
+  }
+}
+@container cms (max-width: 700px) {
+  .s-site:before {
+    background-size: auto 1200px;
+  }
+}
+@container cms (max-width: 700px) {
+  .s-orbit-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+    padding-inline: 10px;
+  }
+  .s-orbit-card:nth-child(n + 3) {
+    display: none;
+  }
+  .s-orbit-card .s-project-image {
+    height: 260px;
+  }
+  .s-orbit-card:nth-child(2) .s-project-image {
+    height: 290px;
+  }
+  .s-orbit-card .s-project-caption {
+    padding: 16px 10px;
+  }
+  .s-orbit-card .s-project-caption h3 {
+    font-size: 16px;
+  }
+  .s-orbit-card .s-project-caption p {
+    font-size: 9px;
+  }
+  .s-project-tag {
+    font-size: 8px;
+    padding: 5px 8px;
+    right: 8px;
+    top: 10px;
+    max-width: calc(100% - 16px);
+  }
+  .s-work .s-carousel-controls {
+    position: static;
+    margin-top: 15px;
+  }
+  .s-all-work {
+    padding-left: 0;
+  }
+}
+@container cms (max-width: 1250px) {
+  .s-site {
+    --s-header-height: 80px;
+  }
+  .s-hero-copy > p {
+    font-size: 15px;
+  }
+  .s-hero h1 {
+    font-size: clamp(44px, 5cqw, 60px);
+  }
+  .s-service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .s-service-card {
+    min-height: 210px;
+  }
+  .s-about-layout {
+    grid-template-columns: 100px minmax(280px, 380px) 1fr;
+    gap: 28px;
+  }
+  .s-project-grid {
+    gap: 18px;
+  }
+  .s-project-caption h3 {
+    font-size: 17px;
+  }
+  .s-project-caption p,
+  .s-project-type {
+    font-size: 10px;
+  }
+  .s-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .s-form {
+    padding: 24px;
+  }
+  .s-form label:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .s-form label:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .s-form-wide {
+    grid-column: 1 / -1;
+  }
+  .s-form-actions {
+    flex-wrap: wrap;
+  }
+  .s-contact-art {
+    display: flex;
+  }
+  .s-portal-card {
+    gap: 14px;
+    padding-right: 18px;
+  }
+  .s-portal-card b {
+    font-size: 19px;
+  }
+  .s-portal-card small {
+    font-size: 11px;
+  }
+}
+@container cms (max-width: 950px) and (min-width: 701px) {
+  .s-hero-layout {
+    gap: 30px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  }
+  .s-orbit-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+  .s-orbit-card:nth-child(n + 3) {
+    display: none;
+  }
+  .s-gallery-bottom {
+    gap: 8px;
+  }
+  .s-gallery-bottom .s-carousel-controls {
+    gap: 10px;
+  }
+  .s-gallery-note {
+    display: none;
+  }
+  .s-services .s-section-intro,
+  .s-work .s-section-intro {
+    column-gap: 35px;
+  }
+  .s-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+  .s-process-list {
+    gap: 20px;
+  }
+  .s-process-list h3 {
+    font-size: 16px;
+  }
+  .s-process-list p {
+    font-size: 12px;
+  }
+  .s-contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .s-contact-art {
+    min-height: 250px;
+  }
+  .s-portals-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@container cms (max-width: 700px) {
+  .s-site {
+    --s-header-height: 78px;
+    --s-ribbon-height: 46px;
+    --s-section-space: 56px;
+  }
+  .s-hero {
+    padding-block: 38px 28px;
+  }
+  .s-hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .s-hero-copy > p {
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 24px;
+  }
+  .s-hero-ctas {
+    margin-top: 26px;
+    gap: 20px;
+  }
+  .s-hero-signature {
+    margin-top: 0;
+  }
+  .s-hero-gallery {
+    margin: 55px -5px 0;
+  }
+  .s-gallery-bottom {
+    margin-top: 28px;
+  }
+  .s-services .s-section-intro,
+  .s-work .s-section-intro {
+    display: block;
+  }
+  .s-services .s-section-intro > p,
+  .s-work .s-section-intro > p {
+    margin-top: 20px;
+  }
+  .s-section-intro > p {
+    font-size: 14px;
+    line-height: 2;
+  }
+  .s-services .s-section-layout,
+  .s-work .s-section-layout,
+  .s-process .s-section-layout {
+    gap: 30px;
+  }
+  .s-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .s-service-card {
+    min-height: 190px;
+    padding: 25px 12px;
+  }
+  .s-service-card h3 {
+    font-size: 15px;
+  }
+  .s-service-card p {
+    font-size: 12px;
+    margin-top: 13px;
+  }
+  .s-service-icon {
+    margin-bottom: 17px;
+  }
+  .s-project-grid {
+    gap: 24px 14px;
+  }
+  .s-project-caption h3 {
+    font-size: 16px;
+  }
+  .s-project-caption p {
+    font-size: 9px;
+  }
+  .s-project-grid .s-project-caption {
+    padding-left: 10px;
+    padding-bottom: 56px;
+  }
+  .s-project-type {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .s-about-layout {
+    grid-template-columns: 63px minmax(0, 1fr);
+    gap: 20px;
+    padding-block: 45px 260px;
+  }
+  .s-about-copy h2 {
+    font-size: 29px;
+  }
+  .s-about-copy p {
+    font-size: 13px;
+    line-height: 2;
+    margin-top: 20px;
+  }
+  .s-about-art {
+    inset-block-start: 230px;
+  }
+  .s-process-list {
+    gap: 30px 14px;
+  }
+  .s-process-list h3 {
+    font-size: 14px;
+  }
+  .s-process-list p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .s-contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+  .s-form {
+    padding: 24px 16px;
+  }
+  .s-form-grid {
+    gap: 22px 14px;
+  }
+  .s-form label {
+    font-size: 11px;
+  }
+  .s-form input,
+  .s-form select,
+  .s-form textarea {
+    font-size: 12px;
+    padding: 10px 8px;
+  }
+  .s-form-actions {
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .s-form-actions > small {
+    font-size: 10px;
+  }
+  .s-contact-art {
+    min-height: 230px;
+  }
+  .s-contact-art h3 {
+    font-size: 30px;
+  }
+  .s-portals-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+  .s-portals-copy h2 {
+    font-size: 27px;
+  }
+  .s-portals-copy p {
+    font-size: 14px;
+  }
+  .s-portal-card {
+    min-height: 145px;
+  }
+  .s-portal-card b {
+    font-size: 20px;
+  }
+  .s-footer-top {
+    padding-bottom: 30px;
+  }
+}

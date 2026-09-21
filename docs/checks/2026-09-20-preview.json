@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-09-20T14:55:50+03:00",
+  "runtime": "Windows / Node 20.20.2 / npm 10.8.2",
+  "source_sha256": {
+    "src/admin/platform.jsx": "6b1486e86210f3b98d8c200a3e36cee0fff204c4c9f5c5b654ddc5d93c861655",
+    "tests/platform-preview.test.js": "edc5e2d5557a630366021ba94df208c921e6ee18362283add13cbf40d24ff06e",
+    "package-lock.json": "f496a976b59de53f0a087a0cfa9ea616ba99a7c53b265d5680d3132bd7a91f60"
+  },
+  "checks": {
+    "node --test tests/platform-preview.test.js": "run: 4 passed / 286.5ms / React server rendering with isolated auth transport",
+    "npm run vercel-build": "run: passed / 6.47s / .tools/platform-preview-build.log",
+    "browser": "not-run"
+  },
+  "reuse_rule": "Review imported sources configuration runtime and affected inputs including uncommitted changes These identities alone do not prove full build validity or live connectivity"
+}

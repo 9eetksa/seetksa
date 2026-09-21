@@ -1,0 +1,43 @@
+.w-request-rows{--rows-muted:#cbb5b5;--rows-border:#70565670;--rows-accent:var(--s-lime,#f28c8c);min-width:0;padding:24px;border:1px solid var(--rows-border);border-radius:14px;background:var(--w-panel)}
+.w-rows-tools{display:grid;grid-template-columns:minmax(200px,1fr) minmax(160px,.45fr) minmax(180px,.5fr);gap:16px;align-items:end}
+.w-rows-tools label{display:grid;gap:8px;min-width:0;font-size:var(--brand-type-data)}
+.w-rows-tools label>span{display:flex;align-items:center;gap:8px;color:var(--rows-muted)}
+.w-rows-tools :is(input,select){width:100%;min-width:0;box-sizing:border-box}
+.w-rows-caption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin:20px 0 12px;color:var(--rows-muted);font-size:var(--brand-type-data)}
+.w-rows-scroll{overflow:auto}
+.w-request-rows table{width:100%;border-collapse:collapse;table-layout:fixed;text-align:right;font-size:var(--brand-type-data)}
+.w-request-rows th{color:var(--rows-muted);font-weight:var(--brand-weight-subheading);padding:15px 12px;border-bottom:1px solid var(--rows-border);background:#191616}
+.w-request-rows th:nth-child(1){width:17%}.w-request-rows th:nth-child(3){width:28%}.w-request-rows th:nth-child(4){width:8%}.w-request-rows th:nth-child(6){width:9%}
+.w-request-rows td{padding:17px 12px;border-bottom:1px solid #70565640;vertical-align:middle;overflow-wrap:anywhere}
+.w-request-rows tbody tr:hover{background:#f28c8c06}
+.w-request-rows .w-row-title button{width:100%;justify-content:space-between;text-align:start;min-height:44px;padding:0;border:0;background:transparent;color:var(--rows-accent);font-weight:var(--brand-weight-subheading)}
+.w-row-title button svg{flex-shrink:0}.w-row-title button span{overflow-wrap:anywhere}
+.w-row-task-label{display:block;color:var(--rows-muted);font-size:var(--brand-type-caption)}
+.w-followup-heading{margin-bottom:20px}
+.w-followup-heading h3{margin:0 0 8px}
+.w-followup-heading p{margin:0;color:var(--rows-muted);font-size:var(--brand-type-data)}
+.w-row-departments{list-style:none;display:grid;gap:6px;margin:8px 0 0;padding:0;color:var(--rows-muted);font-size:var(--brand-type-caption)}
+.w-row-departments li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.w-row-departments li>span:first-child{color:var(--s-white);font-weight:var(--brand-weight-subheading)}
+.w-row-client{font-weight:var(--brand-weight-subheading)}
+.w-row-files{display:inline-flex;align-items:center;gap:7px;font-variant-numeric:tabular-nums;color:var(--rows-muted)}
+.w-row-priority{display:inline-block;padding:4px 10px;border-radius:6px;color:#e29d9d;background:#e29d9d0c;border:1px solid #e29d9d33;white-space:nowrap}
+.w-row-priority.is-urgent{color:#ffd082;border-color:#ffd08244;background:#ffd0820d}
+.w-request-rows footer{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:20px;color:var(--rows-muted);font-size:var(--brand-type-data)}
+.w-root .w-request-rows footer button:disabled{cursor:default}
+.w-rows-empty{padding:30px;text-align:center;color:var(--rows-muted)}
+.w-rows-retry{display:flex;gap:12px;align-items:center;margin-bottom:12px;color:#ffd082;font-size:var(--brand-type-data)}
+@media(max-width:700px){
+ .w-request-rows{padding:16px}
+ .w-rows-tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .w-rows-search{grid-column:1/-1}
+ .w-request-rows table,.w-request-rows tbody{display:block}
+ .w-request-rows thead{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+ .w-request-rows tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;padding:20px 0;border-top:1px solid var(--rows-border)}
+ .w-request-rows td{display:grid;align-content:start;gap:5px;min-width:0;padding:0;border:0}
+ .w-request-rows td::before{content:attr(data-label);color:var(--rows-muted);font-size:var(--brand-type-caption)}
+ .w-request-rows td.w-row-title{grid-column:1/-1;grid-row:1}
+ .w-request-rows .w-row-title button{font-size:var(--brand-type-body)}
+ .w-request-rows th{width:auto}
+ .w-row-priority{justify-self:start}
+}

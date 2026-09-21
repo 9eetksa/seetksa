@@ -1,0 +1,108 @@
+.space-atmosphere {
+  --star-light: #ebe5e5;
+  --star-glow: #e8979755;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+  contain: strict;
+}
+
+.space-star-layer,
+.space-star-field {
+  position: absolute;
+  inset: -5%;
+}
+
+.space-star-layer-0 { --star-size: 1px; opacity: 0.5; }
+.space-star-layer-1 { --star-size: 2px; opacity: 0.7; }
+.space-star-layer-2 { --star-size: 3px; opacity: 0.85; }
+
+.space-star {
+  position: absolute;
+  width: var(--star-size);
+  height: var(--star-size);
+  border-radius: 50%;
+  background: var(--star-light);
+  box-shadow: 0 0 7px 1px var(--star-glow);
+  opacity: 0.22;
+}
+
+.space-star-layer-2 .space-star:nth-child(5n)::before,
+.space-star-layer-2 .space-star:nth-child(5n)::after {
+  content: "";
+  position: absolute;
+  inset: -5px 1px;
+  background: linear-gradient(transparent, var(--star-light), transparent);
+  border-radius: 50%;
+  opacity: 0.65;
+}
+
+.space-star-layer-2 .space-star:nth-child(5n)::after {
+  transform: rotate(90deg);
+}
+
+.space-star:nth-child(3n) {
+  width: 1px;
+  height: 1px;
+  box-shadow: none;
+}
+
+.space-meteor {
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  opacity: 0;
+  rotate: 24deg;
+  background: linear-gradient(90deg, transparent, #e59a9a66 65%, #ede8e8);
+  border-radius: 50%;
+}
+
+.space-meteor::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -1px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--star-light);
+  box-shadow: 0 0 9px 2px var(--star-glow);
+}
+
+.space-meteor-one {
+  left: 13%;
+  top: 19%;
+}
+.space-meteor-two {
+  left: 53%;
+  top: 67%;
+}
+
+/* Put the effect between the existing scenery and all interactive content. */
+.s-hero:before {
+  z-index: -2;
+}
+
+@media (max-width: 700px) {
+  .space-star:nth-child(n + 13) {
+    display: none;
+  }
+  .space-meteor {
+    width: 65px;
+  }
+  .space-meteor-two {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .space-meteor {
+    display: none;
+  }
+  .space-star {
+    opacity: 0.12;
+  }
+}
