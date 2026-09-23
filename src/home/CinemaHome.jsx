@@ -81,7 +81,7 @@ export default function CinemaHome() {
         <div className="c-hero-top"><span>نحكيها بطريقتنا</span><span lang="en">SEET / CREATIVE PRODUCTION</span></div>
         <div className="c-hero-image"><img src={frames[0]} alt="تغطية صيت لموسم صيف عسير" width="1172" height="646" fetchpriority="high"/><div className="c-image-shade"/></div>
         <div className="c-hero-content">
-          <h1 className="c-hero-title" id="cinema-title"><span>نصنع اللقطة</span><span>ونترك <em>الصيت</em></span></h1>
+          <h1 className="c-hero-title" id="cinema-title"><span>نصنع اللقطة</span><span className="c-hero-line"><span>ونترك</span><em>الصيت</em></span></h1>
           <div className="c-hero-bottom">
             <p>تصوير يلفت<br/>مونتاج يُحسّ وإخراج يبقى</p>
             <a className="c-story-link" href="#story"><span className="c-story-arrow"><ArrowDown size={29} aria-hidden="true"/></span><span>ادخل الحكاية<small>مشهدان وكل الفكرة</small></span></a>
