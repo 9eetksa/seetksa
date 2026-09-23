@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {testSeetMissions} from './seet-missions.mjs';
 import {testSeetPhoneAccounts} from './seet-phone-accounts.mjs';
 import {testSeetWhatsappAuthHook} from './seet-whatsapp-auth-hook.mjs';
+import {testSeetPhoneImpersonation} from './seet-phone-impersonation.mjs';
 const db=new PGlite();
 await db.exec(`
 create role anon; create role authenticated; create role service_role bypassrls; create role supabase_auth_admin;
@@ -165,5 +166,6 @@ try{
   await testSeetMissions(db);
   await testSeetPhoneAccounts(db);
   await testSeetWhatsappAuthHook(db);
+  await testSeetPhoneImpersonation(db);
  }
 }catch(error){console.error('FAIL',error.message,error.where||'',error.query||'');process.exitCode=1;}finally{await db.close();}

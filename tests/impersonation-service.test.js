@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {createHmac} from 'node:crypto';
 import {createImpersonationService} from '../server/impersonation-service.mjs';
 import {impersonationHandler} from '../api/impersonation.js';
 
@@ -12,12 +13,13 @@ const now=Date.parse('2026-09-12T17:00:00Z');
 const jwt=(sub,session_id,extra={})=>`header.${Buffer.from(JSON.stringify({sub,session_id,exp:Math.floor(now/1000)+3600,role:'authenticated',...extra})).toString('base64url')}.signature`;
 const actorToken=jwt(actor,actorSession),targetToken=jwt(target,targetSession);
 const env={VITE_SUPABASE_URL:'https://project.supabase.co',VITE_SUPABASE_PUBLISHABLE_KEY:'sb_publishable_test',SUPABASE_SERVICE_ROLE_KEY:'service-secret',ONBOARDING_ENCRYPTION_KEY:'a'.repeat(64)};
-function harness({role='super_admin',targetRole='employee',accessError=null,otpUser=target,otpToken=targetToken,auditError=null}={}){
+function harness({role='super_admin',targetRole='employee',accessError=null,otpUser=target,otpToken=targetToken,auditError=null,phoneOnly=false,signingSecret='s'.repeat(40),openError=null}={}){
  const calls=[],requests=[],owner={id:actor,app_metadata:{role}},user={id:target,email:'client@example.test',phone:'966500000000',app_metadata:{role:targetRole},user_metadata:{display_name:'العميل'}};
  let sealed=null;
+ if(phoneOnly){user.email='';user.app_metadata.phone_only=true;}
  const admin={auth:{getUser:async()=>({data:{user:owner},error:null}),admin:{generateLink:async input=>{calls.push(['generateLink',input]);return {data:{properties:{hashed_token:'otp-private'},user},error:null};},signOut:async(...args)=>{calls.push(['signOut',...args]);return {error:null};}}},rpc:async(name,args)=>{
   calls.push([name,args]);
-  if(name==='platform_impersonation_open')return {data:{id,expires_at:new Date(now+900000).toISOString(),target,email:user.email},error:null};
+  if(name==='platform_impersonation_open')return {data:{id,expires_at:new Date(now+900000).toISOString(),target,email:user.email,...(phoneOnly?{credential_method:'delegated_jwt',user}:{})},error:openError};
   if(name==='platform_impersonation_seal'){sealed=args.p_cipher;return {data:null,error:null};}
   if(name==='platform_impersonation_access')return {data:accessError?null:{id,expires_at:new Date(now+900000).toISOString(),target,token_cipher:sealed,user},error:accessError};
   if(name==='platform_impersonation_close')return {data:sealed,error:null};
@@ -25,7 +27,7 @@ function harness({role='super_admin',targetRole='employee',accessError=null,otpU
   return {data:null,error:null};
  }};
  const anonymous={auth:{verifyOtp:async input=>{calls.push(['verifyOtp',input]);return {data:{session:{access_token:otpToken,refresh_token:'never-return-refresh'},user:{...user,id:otpUser}},error:null};}}};
- const service=createImpersonationService(env,{now:()=>now,createClient:(_url,key)=>key===env.SUPABASE_SERVICE_ROLE_KEY?admin:anonymous,transport:async(url,options)=>{requests.push({url,options});return new Response(JSON.stringify({ok:true}),{status:200,headers:{'content-type':'application/json','content-range':'0-1/2','set-cookie':'secret=no'}});}});
+ const service=createImpersonationService({...env,SUPABASE_JWT_SECRET:signingSecret},{now:()=>now,createClient:(_url,key)=>key===env.SUPABASE_SERVICE_ROLE_KEY?admin:anonymous,transport:async(url,options)=>{requests.push({url,options});return new Response(JSON.stringify({ok:true}),{status:200,headers:{'content-type':'application/json','content-range':'0-1/2','set-cookie':'secret=no'}});}});
  const start=()=>service({action:'start',userId:target},actorToken);
  return {service,start,calls,requests,revokeAccess:()=>{accessError={code:'42501',message:'session_expired'};},get sealed(){return sealed;}};
 }
@@ -38,6 +40,44 @@ test('starts a bound server-only target session without disclosing credentials',
  assert.ok(h.sealed&&!h.sealed.includes(targetToken));
  const seal=h.calls.find(([name])=>name==='platform_impersonation_seal')[1];
  assert.equal(seal.p_actor,actor);assert.equal(seal.p_actor_session,actorSession);assert.equal(seal.p_target_session,targetSession);
+});
+
+test('phone-only impersonation uses a short-lived target credential without changing Auth identities',async()=>{
+ const h=harness({phoneOnly:true}),result=await h.start();
+ assert.equal(result.user.email,'');
+ assert.ok(!h.calls.some(([name])=>['generateLink','verifyOtp'].includes(name)));
+ await h.service({action:'proxy',sessionId:id,path:'/rest/v1/rpc/seet_mission_context',method:'POST',body:'{}'},actorToken);
+ const token=h.requests[0].options.headers.Authorization.replace('Bearer ',''),parts=token.split('.');
+ const payload=JSON.parse(Buffer.from(parts[1],'base64url'));
+ assert.equal(payload.sub,target);assert.equal(payload.session_id,id);assert.equal(payload.seet_delegation,id);
+ assert.equal(payload.role,'authenticated');assert.equal(payload.exp-payload.iat,900);
+ assert.equal(parts[2],createHmac('sha256','s'.repeat(40)).update(parts[0]+'.'+parts[1]).digest('base64url'));
+ assert.ok(!JSON.stringify(result).includes(token));
+ await h.service({action:'end',sessionId:id},actorToken);
+ assert.ok(!h.calls.some(([name])=>name==='signOut'));
+});
+
+test('missing phone signing configuration fails closed and closes the unsealed binding',async()=>{
+ const h=harness({phoneOnly:true,signingSecret:''});
+ await assert.rejects(h.start(),{status:503});
+ assert.ok(h.calls.some(([name])=>name==='platform_impersonation_close'));
+ assert.ok(!h.calls.some(([name])=>name==='platform_impersonation_seal'));
+});
+
+test('start errors describe onboarding and ineligible accounts instead of an expired session',async()=>{
+ for(const [message,copy] of [['target_onboarding','أول دخول'],['invalid_target','غير مؤهل'],['forbidden','بجلسة دخول فعالة']]){
+  const h=harness({openError:{code:'42501',message}});
+  await assert.rejects(h.start(),e=>e.status===403&&e.message.includes(copy)&&!e.message.includes('انتهت'));
+ }
+});
+
+test('mission mutations require an audit and remain subject to target RLS',async()=>{
+ const h=harness({phoneOnly:true});await h.start();
+ await h.service({action:'proxy',sessionId:id,path:'/rest/v1/rpc/seet_mission_action',method:'POST',body:JSON.stringify({p_action:'accept',p:{}})},actorToken);
+ assert.ok(h.calls.some(([name,args])=>name==='platform_impersonation_log'&&args.p_resource==='rest/v1/rpc/seet_mission_action'));
+ const blocked=harness({phoneOnly:true,auditError:{code:'XX000',message:'unavailable'}});await blocked.start();
+ await assert.rejects(blocked.service({action:'proxy',sessionId:id,path:'/rest/v1/rpc/seet_mission_update_draft',method:'POST',body:'{}'},actorToken));
+ assert.equal(blocked.requests.length,0);
 });
 
 test('non-superadmins cannot create or proxy impersonation sessions',async()=>{

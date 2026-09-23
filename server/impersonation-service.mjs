@@ -1,6 +1,6 @@
 import {createClient} from '@supabase/supabase-js';
 import WebSocket from 'ws';
-import {randomBytes,createCipheriv,createDecipheriv} from 'node:crypto';
+import {randomBytes,createCipheriv,createDecipheriv,createHmac} from 'node:crypto';
 import {clientAccountService} from './client-account-service.mjs';
 
 const UUID=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -21,6 +21,9 @@ for(const name of ['work_department_inquiry_action','work_client_resource_action
 }
 for(const name of ['work_personal_planner','work_task_due_changes','work_reschedule_task_due','work_review_task_due_change','work_planner_action','work_planner_moves'])RPCS.add(name);
 for(const name of ['work_reschedule_task_due','work_review_task_due_change','work_planner_action'])WRITE_RPCS.add(name);
+for(const name of ['seet_mission_context','seet_mission_board','seet_mission_detail','seet_mission_action','seet_mission_update_draft'])RPCS.add(name);
+for(const name of ['seet_mission_action','seet_mission_update_draft'])WRITE_RPCS.add(name);
+BUCKETS.add('mission-files');
 
 function claims(token){
  try{
@@ -144,7 +147,10 @@ export function createImpersonationService(env,{createClient:clientFactory=creat
   const {data,error}=await getAdmin().rpc(name,args);
   if(error){
    const code=String(error.message||'');
-   if(error.code==='42501'||/forbidden|session_expired|invalid_target|unauthorized/.test(code))throw fail(403,'انتهت جلسة الدخول بالنيابة أو لم تعد متاحة');
+   if(/target_onboarding/.test(code))throw fail(403,'يحتاج المستخدم إلى إكمال أول دخول وتعيين كلمة المرور قبل الدخول بالنيابة');
+   if(/invalid_target|staff_only/.test(code))throw fail(403,'الحساب غير مؤهل للدخول بالنيابة تحقق من تفعيله ونوعه');
+   if(/forbidden|unauthorized/.test(code))throw fail(403,'الدخول بالنيابة متاح للسوبر أدمن بجلسة دخول فعالة');
+   if(error.code==='42501'||/session_expired/.test(code))throw fail(403,'انتهت جلسة الدخول بالنيابة ارجع إلى حسابك وابدأ جلسة جديدة');
    if(/rate_limit/.test(code))throw fail(429,'انتظر قليلا قبل بدء جلسة جديدة');
    throw fail(409,'تعذر إكمال الدخول بالنيابة أعد المحاولة');
   }
@@ -184,16 +190,29 @@ export function createImpersonationService(env,{createClient:clientFactory=creat
   if(jwt.sub!==row.target||jwt.exp*1000<=now()||row.target_session&&jwt.session_id!==row.target_session)throw denied();
   return {...row,token,remaining:Math.min(remaining,jwt.exp-Math.floor(now()/1000))};
  }
- async function revoke(token){if(token)await getAdmin().auth.admin.signOut(token,'local').catch(()=>{});}
+ async function revoke(token){if(token&&!claims(token).seet_delegation)await getAdmin().auth.admin.signOut(token,'local').catch(()=>{});}
  return async(input,actorToken)=>{
   if(!input||Array.isArray(input)||typeof input!=='object')throw fail(400,'بيانات الطلب غير صالحة');
   const {actor,session}=await identity(actorToken);
   if(input.action==='start'){
    if(!UUID.test(input.userId||'')||input.userId===actor)throw denied();
    const opened=await rpc('platform_impersonation_open',{p_actor:actor,p_actor_session:session,p_target:input.userId});
-   if(!opened||!UUID.test(opened.id||'')||opened.target!==input.userId||typeof opened.email!=='string')throw denied();
+   if(!opened||!UUID.test(opened.id||'')||opened.target!==input.userId)throw denied();
    let token;
    try{
+    if(opened.credential_method==='delegated_jwt'){
+     const user=opened.user,secret=env.SUPABASE_JWT_SECRET;
+     if(!user||user.id!==opened.target||!['employee','admin'].includes(user.app_metadata?.role)||user.is_anonymous||[true,'true'].includes(user.app_metadata?.must_change_password))throw denied();
+     if(typeof secret!=='string'||secret.length<32)throw fail(503,'الدخول بالنيابة لحسابات الجوال غير مهيأ على الخادم');
+     const iat=Math.floor(now()/1000),exp=Math.min(Math.floor(Date.parse(opened.expires_at)/1000),iat+900);
+     if(!Number.isFinite(exp)||exp<=iat)throw denied();
+     const encode=value=>Buffer.from(JSON.stringify(value)).toString('base64url');
+     const header=encode({alg:'HS256',typ:'JWT'});
+     const payload=encode({iss:base.origin+'/auth/v1',aud:'authenticated',sub:user.id,role:'authenticated',iat,exp,session_id:opened.id,seet_delegation:opened.id,is_anonymous:false,aal:'aal1',phone:user.phone||'',email:user.email||'',app_metadata:user.app_metadata,user_metadata:user.user_metadata||{}});
+     const unsigned=header+'.'+payload;
+     token=unsigned+'.'+createHmac('sha256',secret).update(unsigned).digest('base64url');
+    }else{
+    if(typeof opened.email!=='string'||!opened.email)throw denied();
     const link=await getAdmin().auth.admin.generateLink({type:'magiclink',email:opened.email});
     if(link.error||link.data?.user?.id!==opened.target||!link.data?.properties?.hashed_token)throw denied();
     // A fresh short-lived SDK object keeps OTP sign-in away from the service-role client
@@ -201,6 +220,7 @@ export function createImpersonationService(env,{createClient:clientFactory=creat
     const verified=await auth.auth.verifyOtp({type:'magiclink',token_hash:link.data.properties.hashed_token});
     token=verified.data?.session?.access_token;
     if(verified.error||verified.data?.user?.id!==opened.target||!token)throw denied();
+    }
     const jwt=claims(token);
     if(jwt.sub!==opened.target||jwt.exp*1000<=now()||jwt.session_id===session)throw denied();
     await rpc('platform_impersonation_seal',{...binding(actor,session,opened.id),p_target_session:jwt.session_id,p_cipher:encrypt(token,actor,session,opened.id)});

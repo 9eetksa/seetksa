@@ -13,7 +13,7 @@ const pending = () => { let resolve; const promise = new Promise(done => { resol
 let buildSerial = 0;
 
 async function harness({ savedSession = null, transport, getUser } = {}) {
-  const memory = new Map(savedSession ? [['provision-acting-session', savedSession]] : []);
+  const memory = new Map(savedSession ? [['seet-acting-session', savedSession]] : []);
   const requests = [];
   const oldWindow = globalThis.window;
   const oldFetch = globalThis.fetch;
@@ -50,7 +50,7 @@ test('delegated browsing stores only an opaque session and proxies data with ori
   const h = await harness();
   try {
     await h.module.startImpersonation(target.id);
-    assert.deepEqual([...h.memory], [['provision-acting-session', sessionId]]);
+    assert.deepEqual([...h.memory], [['seet-acting-session', sessionId]]);
     const response = await h.module.impersonationFetch('https://project.supabase.co/rest/v1/work_requests?select=id', { headers: { Authorization: 'must-not-forward', 'accept-profile': 'private', Prefer: 'count=exact' } });
     assert.equal((await response.json()).user_id, target.id);
     const proxied = h.requests.at(-1);
