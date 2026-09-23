@@ -4,6 +4,7 @@ import React, { lazy, Suspense } from "react";
 const Editor = lazy(() => import("./admin/Editor"));
 const Portal = lazy(() => import("./auth/Portal"));
 const Studio = lazy(() => import("./Studio"));
+const CinemaHome = lazy(() => import('./home/CinemaHome'));
 const portalPaths = [
   '/change-password',
   "/login",
@@ -34,7 +35,7 @@ function Routes({path, recovery}) {
     </Suspense>
   ) : (
     <Suspense fallback={<div className="s-site" role="status" dir="rtl">جار تحميل الموقع</div>}>
-      <Studio />
+      {new URLSearchParams(window.location.search).get('design') === 'classic' ? <Studio /> : <CinemaHome />}
     </Suspense>
   );
 }
