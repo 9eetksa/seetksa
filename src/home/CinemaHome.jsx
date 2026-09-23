@@ -1,14 +1,15 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {ArrowDown, ArrowUpLeft, ArrowUpRight, Menu, X} from 'lucide-react';
+import {ArrowDown, ArrowUpLeft, ArrowUpRight, Menu, X, Pause, Play} from 'lucide-react';
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {usePlatform} from '../admin/platform';
 import {rolePaths, trustedRole} from '../auth/access';
 import CinemaPartners from './CinemaPartners';
+import useHeroFilm from './useHeroFilm';
 import './cinema-home.css';
 
 gsap.registerPlugin(ScrollTrigger);
-const frames = ['/brand/official/project-01.webp', '/brand/official/project-02.webp', '/brand/official/project-04.webp'];
+const frames = ['/brand/official/project-01.webp', '/brand/cinema/seet-craft-v1.png', '/brand/official/project-04.webp'];
 const nav = [['#story', 'الفكرة'], ['#partners', 'من وثق بنا'], ['#contact', 'خلّنا نتكلم']];
 
 function Brand({dark = false}) {
@@ -42,6 +43,7 @@ function useCinemaMotion(root, setChapter) {
 export default function CinemaHome() {
   const root = useRef(null), menuButton = useRef(null);
   const [menu, setMenu] = useState(false), [chapter, setChapter] = useState(0);
+  const film = useHeroFilm();
   const platform = usePlatform(), user = platform?.user;
   const accountPath = user?.app_metadata?.must_change_password ? '/change-password'
     : user && sessionStorage.getItem('seet-recovery-user') === user.id ? '/reset-password'
@@ -79,7 +81,11 @@ export default function CinemaHome() {
     <main id="main" tabIndex={-1}>
       <section className="c-hero" id="home" aria-labelledby="cinema-title">
         <div className="c-hero-top"><span>نحكيها بطريقتنا</span><span lang="en">SEET / CREATIVE PRODUCTION</span></div>
-        <div className="c-hero-image"><img src={frames[0]} alt="تغطية صيت لموسم صيف عسير" width="1172" height="646" fetchpriority="high"/><div className="c-image-shade"/></div>
+        <div className="c-hero-image">
+          <img src={frames[0]} alt="تغطية صيت لموسم صيف عسير" width="1172" height="646" fetchpriority="high"/>
+          <video ref={film.ref} id="seet-hero-film" className="c-hero-film" src="/brand/official/seet-asir-hero.mp4" poster={frames[0]} muted loop playsInline preload="metadata" aria-hidden="true" hidden={film.failed}/>
+          <div className="c-image-shade"/>
+        </div>
         <div className="c-hero-content">
           <h1 className="c-hero-title" id="cinema-title"><span>نصنع اللقطة</span><span className="c-hero-line"><span>ونترك</span><em>الصيت</em></span></h1>
           <div className="c-hero-bottom">
@@ -87,14 +93,16 @@ export default function CinemaHome() {
             <a className="c-story-link" href="#story"><span className="c-story-arrow"><ArrowDown size={29} aria-hidden="true"/></span><span>ادخل الحكاية<small>مشهدان وكل الفكرة</small></span></a>
           </div>
         </div>
-        <div className="c-hero-caption"><span>من عدسة صيت</span><span>موسم صيف عسير</span><span className="c-record" lang="en">IN FRAME</span></div>
+        <div className="c-hero-caption"><span>من عدسة صيت</span><span>موسم صيف عسير</span><span className="c-record" lang="en">IN FRAME</span>
+          {!film.failed && <button type="button" className="c-film-toggle" aria-controls="seet-hero-film" onClick={film.toggle} aria-label={film.playing ? 'إيقاف فيديو الخلفية' : 'تشغيل فيديو الخلفية'}>{film.playing ? <Pause size={16}/> : <Play size={16}/>}</button>}
+        </div>
       </section>
 
       <section className="c-story" id="story" aria-label="فكرة صيت في مشهدين">
         <div className="c-story-stage">
           <div className="c-story-top"><span>فكرتك من أول كادر إلى آخر أثر</span><a href="#contact">تخط الحكاية <ArrowDown size={15} aria-hidden="true"/></a></div>
           <article className="c-capture" id="capture-chapter" aria-labelledby="capture-title">
-            <img className="c-capture-image" src={frames[1]} alt="لحظة من سباق العلا وثقتها صيت" width="1172" height="646" loading="lazy"/>
+            <img className="c-capture-image" src={frames[1]} alt="مشهد إبداعي لكاميرا سينمائية ويد تضبط العدسة تحت إضاءة الاستوديو" width="1672" height="941" loading="lazy"/>
             <div className="c-capture-shade"/>
             <div className="c-viewfinder" aria-hidden="true"><i/><i/><i/><i/><span>+</span></div>
             <div className="c-capture-copy"><span className="c-chapter-label">المشهد الأول / التصوير</span><h2 id="capture-title">نشوفها<br/><em>بزاوية ثانية</em></h2><p>ضوء ولحظة وعين تعرف أين تقف</p></div>

@@ -23,3 +23,4 @@ list. Recognized logos have their brand names as alternative text; the remaining
 logos retain a neutral label using their source ID rather than an invented name
 Duplicate animation copies are hidden from screen readers. Pause controls and
 reduced-motion horizontal scrolling are provided without changing the logo files
+`seet-asir-hero.mp4`: copied unchanged on 2026-09-23 from https://9eetksa.com/media/projects/01/videos/1.mp4, the official homepage background video (24,737,197 bytes)
