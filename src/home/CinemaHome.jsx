@@ -21,7 +21,6 @@ function useCinemaMotion(root, setChapter) {
     const media = gsap.matchMedia();
     media.add('(prefers-reduced-motion: no-preference) and (min-height: 581px)', () => {
       const scope = gsap.context(() => {
-        gsap.from('.c-hero-title > span', {y:48, opacity:0, stagger:.13, duration:.9, ease:'power3.out', clearProps:'transform,opacity'});
         const story = root.current.querySelector('.c-story');
         const edit = gsap.timeline({scrollTrigger:{trigger:story, start:'top top', end:'bottom bottom', scrub:.65, invalidateOnRefresh:true,
           onUpdate:self => setChapter(self.progress >= .52 ? 1 : 0)}});
@@ -87,9 +86,8 @@ export default function CinemaHome() {
           <div className="c-image-shade"/>
         </div>
         <div className="c-hero-content">
-          <h1 className="c-hero-title" id="cinema-title"><span>نصنع اللقطة</span><span className="c-hero-line"><span>ونترك</span><em>الصيت</em></span></h1>
+          <h1 className="c-sr-only" id="cinema-title">صيت — تصوير ومونتاج وإخراج</h1>
           <div className="c-hero-bottom">
-            <p>تصوير يلفت<br/>مونتاج يُحسّ وإخراج يبقى</p>
             <a className="c-story-link" href="#story"><span className="c-story-arrow"><ArrowDown size={29} aria-hidden="true"/></span><span>ادخل الحكاية<small>مشهدان وكل الفكرة</small></span></a>
           </div>
         </div>
