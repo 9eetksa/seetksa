@@ -102,11 +102,18 @@
 .c-scroll-caption { display: flex; align-items: center; gap: 12px; margin-inline-start: auto; font-size: 11px; }
 
 .c-eyebrow { display: block; font-size: 12px; margin-bottom: 25px; }
-.c-partners { padding: 42px var(--c-gutter) 58px; display: flex; gap: 7vw; align-items: center; background: var(--c-paper); color: var(--c-ink); border-top: 1px solid #11111026; }
-.c-home .c-partners h2 { font-family: 'Seet Greta',sans-serif; font-size: 14px; font-weight: 400; white-space: nowrap; }
-.c-partners > div { display: flex; flex: 1; justify-content: space-between; align-items: center; gap: 40px; }
-.c-partners img { width: min(15vw, 160px); height: 70px; object-fit: contain; filter: grayscale(1); }
-.c-partners img.c-invert { filter: grayscale(1) invert(1); }
+.c-partners { padding: 64px var(--c-gutter); display: grid; grid-template-columns: minmax(160px, .8fr) 3fr; gap: 40px; align-items: center; background: var(--c-paper); color: var(--c-ink); border-top: 1px solid #11111026; }
+.c-partners-heading .c-eyebrow { margin-bottom: 12px; color: var(--c-red); }
+.c-home .c-partners h2 { font-size: 30px; line-height: 1.4; }
+.c-partners-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; }
+.c-partner { min-width: 0; padding: 8px 18px; text-align: center; }
+.c-partner + .c-partner { border-inline-start: 1px solid #1111101a; }
+.c-partner-mark { height: 112px; display: flex; align-items: center; justify-content: center; }
+.c-partner-mark img { width: auto; height: auto; max-width: 100%; max-height: 94px; object-fit: contain; }
+.c-partner-wide img { width: 128px; max-height: 64px; }
+.c-partner-portrait img { height: 88px; }
+.c-partner-mark img.c-invert { filter: invert(1); }
+.c-partner-name { display: block; max-width: 170px; min-height: 42px; margin: 14px auto 0; font-size: 12px; line-height: 1.75; color: #494642; text-wrap: balance; }
 .c-footer { padding: 84px var(--c-gutter) 0; background: var(--c-paper); color: var(--c-ink); border-top: 1px solid #11111026; }
 .c-footer-main { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding-bottom: 80px; }
 .c-home .c-footer h2 { font-size: clamp(80px, 12vw, 190px); line-height: 1.1; letter-spacing: -.035em; }
@@ -124,8 +131,9 @@
   .c-nav { gap: 22px; }
   .c-home .c-hero-title { font-size: clamp(64px, 10vw, 100px); }
   .c-hero { min-height: 750px; min-height: min(850px, calc(100svh - 100px)); }
-  .c-partners { gap: 32px; }
-  .c-partners > div { gap: 20px; }
+  .c-partners { grid-template-columns: 1fr; gap: 32px; }
+  .c-partners-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; }
+  .c-partners-heading .c-eyebrow { order: 1; margin: 0; }
 }
 @media (max-width: 680px) {
   .c-home { --c-gutter: 24px; }
@@ -177,10 +185,17 @@
   .c-scroll-caption { font-size: 9px; gap: 6px; }
   .c-scroll-caption svg { display: none; }
   .c-eyebrow { font-size: 11px; margin-bottom: 20px; }
-  .c-partners { display: block; padding-block: 34px; }
-  .c-home .c-partners h2 { margin-bottom: 28px; font-size: 12px; }
-  .c-partners > div { display: grid; grid-template-columns: 1fr 1fr; justify-items: center; gap: 20px 40px; }
-  .c-partners img { width: 135px; height: 58px; }
+  .c-partners { padding-block: 42px; gap: 24px; }
+  .c-home .c-partners h2 { font-size: 25px; }
+  .c-partners-heading .c-eyebrow { font-size: 10px; }
+  .c-partners-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .c-partner { padding: 20px 12px; }
+  .c-partner:nth-child(odd) { border-inline-start: 0; }
+  .c-partner:nth-child(n+3) { border-top: 1px solid #1111101a; }
+  .c-partner-mark { height: 100px; }
+  .c-partner-wide img { width: 112px; max-height: 56px; }
+  .c-partner-portrait img { height: 84px; }
+  .c-partner-name { margin-top: 12px; font-size: 11px; min-height: 39px; }
   .c-footer { padding-top: 60px; }
   .c-footer-main { padding-bottom: 60px; gap: 20px; align-items: flex-end; }
   .c-home .c-footer h2 { font-size: clamp(58px, 12vw, 82px); }

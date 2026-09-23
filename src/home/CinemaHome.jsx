@@ -112,7 +112,17 @@ export default function CinemaHome() {
         </div>
       </section>
 
-      <section className="c-partners" id="partners" aria-labelledby="partners-title"><h2 id="partners-title">صيت صنعناه مع</h2><div>{[[6,'هيئة تطوير منطقة عسير'],[9,'MBC'],[10,'المعهد الملكي للفنون التقليدية'],[11,'وزارة الحج والعمرة']].map(([id,name])=><img key={id} src={`/brand/official/partners/${id}.webp`} className={id === 6 ? 'c-invert' : undefined} alt={name} width="256" height="110" loading="lazy"/>)}</div></section>
+      <section className="c-partners" id="partners" aria-labelledby="partners-title">
+        <div className="c-partners-heading"><span className="c-eyebrow">ثقة نعتز بها</span><h2 id="partners-title">شركاء النجاح</h2></div>
+        <ul className="c-partners-list">
+          {[[6,'هيئة تطوير منطقة عسير','wide'],[9,'MBC','wide'],[10,'المعهد الملكي للفنون التقليدية','portrait'],[11,'وزارة الحج والعمرة','portrait']].map(([id,name,shape]) =>
+            <li className={`c-partner c-partner-${shape}`} key={id}>
+              <div className="c-partner-mark"><img src={`/brand/official/partners/${id}.webp`} className={id === 6 ? 'c-invert' : undefined} alt="" loading="lazy" decoding="async"/></div>
+              <span className="c-partner-name" dir="auto">{name}</span>
+            </li>
+          )}
+        </ul>
+      </section>
 
       <footer className="c-footer" id="contact">
         <div className="c-footer-main"><div><span className="c-eyebrow">عندك فكرة؟</span><h2>خلّها تاخذ<br/><em>صيت</em></h2></div><a className="c-contact-link" href="https://wa.me/966559839698" target="_blank" rel="noopener noreferrer" aria-label="تواصل مع صيت على واتساب"><ArrowUpLeft aria-hidden="true"/><span>خلّنا نتكلم</span></a></div>
